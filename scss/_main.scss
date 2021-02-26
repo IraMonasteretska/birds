@@ -1,0 +1,67 @@
+*{
+  font-family: Arial;
+font-style: normal;
+font-weight: normal;
+}
+
+.container {
+  max-width: 1860px;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.standart-title{
+  font-family: 'Times New Roman';
+font-style: normal;
+font-weight: bold;
+font-size: 58px;
+line-height: 130%;
+letter-spacing: 0.09em;
+}
+
+.standart-button-link {
+  border: 1px solid #C9AF6E;
+  border-radius: 4px;
+  font-family: Arial;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 140%;
+letter-spacing: 0.09em;
+color: #C9AF6E;
+display: flex;
+justify-content: center;
+text-align: center;
+align-items: center;
+max-width: 255px;
+padding: 10px;
+height: 50px;
+transition: all .3s;
+cursor: pointer;
+&:hover{
+  color: #F5C860;
+  border-color: #F5C860;;
+}
+}
+
+
+.inherit-block{
+  font-family: inherit;
+font-style: inherit;
+font-weight: inherit;
+font-size: inherit;
+line-height: inherit;
+letter-spacing: inherit;
+text-transform: inherit;
+}
+
+
+body{
+  overflow-x: hidden;
+  max-width: 2000px;
+  margin: 0 auto;
+}
+html{
+  overflow-x: hidden
+}
