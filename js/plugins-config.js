@@ -44,7 +44,7 @@ $(".two-block__slider").slick({
 let currentSlide;
 const updateSliderCounter = function (slick, currentIndex) {
   currentSlide = slick.slickCurrentSlide() + 1;
-  $(".two-block__slider-current-slide").text("0" + currentSlide + '.') ;
+  $(".two-block__slider-current-slide").text("0" + currentSlide + '.');
 };
 
 $(".two-block__slider").on("init", function (event, slick) {
@@ -61,14 +61,14 @@ $(".two-block__slider").on(
 //end slick slider - two-block
 
 // start scroll animation - first
-
+if(document.querySelector('.first-sections-scroll')){
 var controller = new ScrollMagic.Controller();
 
 var horizontalSlide = new TimelineMax()
-.to(".first-sections-scroll", 1,   {x: "-20%"})
-.to(".first-sections-scroll", 1,   {x: "-40%"})
-.to(".first-sections-scroll", 1,   {x: "-60%"})
-.to(".first-sections-scroll", 1,   {x: "-80%"})
+  .to(".first-sections-scroll", 1, { x: "-20%" })
+  .to(".first-sections-scroll", 1, { x: "-40%" })
+  .to(".first-sections-scroll", 1, { x: "-60%" })
+  .to(".first-sections-scroll", 1, { x: "-80%" })
 
 new ScrollMagic.Scene({
   triggerElement: ".first-wrapper-scroll",
@@ -81,18 +81,47 @@ new ScrollMagic.Scene({
 
 let sections = document.querySelector('.first-sections-scroll')
 let section = document.querySelectorAll('.section-scroll')
-sections.style.width = section[0].offsetWidth * section.length +   'px'
-
+sections.style.width = section[0].offsetWidth * section.length + 'px'
+}
 //show more text
-let sectionScrollContainer  = document.querySelectorAll('.section-scroll__bot-cont')
+let sectionScrollContainer = document.querySelectorAll('.section-scroll__bot-cont')
 
-for(let i = 0; i < sectionScrollContainer.length; i++){
+for (let i = 0; i < sectionScrollContainer.length; i++) {
   let button = sectionScrollContainer[i].querySelector('.section-scroll__view-more-btn')
   let text = sectionScrollContainer[i].querySelector('.section-scroll__text.hidden')
+  let btnCont = sectionScrollContainer[i].querySelector('.section-scroll__btn-cont')
+
   button.addEventListener('click', () => {
     text.classList.remove('hidden')
     text.classList.add('visible')
     button.classList.add('hidden')
+    btnCont.classList.add('hidden')
   })
 }
 
+// end scroll animation - first
+
+// start scroll animation - two
+if(document.querySelector('.two-sections-scroll')){
+var controller = new ScrollMagic.Controller();
+
+var horizontalSlide = new TimelineMax()
+  .to(".two-sections-scroll", 1, { x: "-20%" })
+  .to(".two-sections-scroll", 1, { x: "-40%" })
+  .to(".two-sections-scroll", 1, { x: "-60%" })
+  .to(".two-sections-scroll", 1, { x: "-80%" })
+
+new ScrollMagic.Scene({
+  triggerElement: ".two-wrapper-scroll",
+  triggerHook: "onLeave",
+  duration: "400%"
+})
+  .setPin(".two-wrapper-scroll")
+  .setTween(horizontalSlide)
+  .addTo(controller);
+
+let sections = document.querySelector('.two-sections-scroll')
+let section = document.querySelectorAll('.section-scroll-two')
+sections.style.width = section[0].offsetWidth * section.length + 'px'
+}
+// end scroll animation - two

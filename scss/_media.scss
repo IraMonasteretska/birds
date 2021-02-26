@@ -1,13 +1,10 @@
 //media
 @media (max-width: 1610px) {
-
-
-
   .pre-scroll__img {
-   margin-left: 0px;
+    margin-left: 0px;
   }
 
-  .first-section-scroll{
+  .first-section-scroll {
     flex: 0 0 30px;
   }
 
@@ -57,6 +54,32 @@
     &__text {
       font-size: 27px;
     }
+  }
+
+  .our-concept {
+    &__btns {
+      display: block;
+    }
+
+    &__btns-left {
+      margin-right: 0;
+    }
+
+    &__btns-right {
+      margin-left: 0px;
+      display: block;
+      margin-top: 30px;
+    }
+
+    &__quadro {
+      height: 450px;
+      bottom: -225px;
+      left: 30px;
+    }
+  }
+
+  .our-concept {
+    margin-bottom: 400px;
   }
 }
 
@@ -127,55 +150,169 @@
       width: calc(35% -15px);
     }
   }
+
+  .our-concept {
+    &__title {
+      font-size: 48px;
+    }
+
+    &__rigth {
+      width: calc(65% - 70px);
+      padding: 70px 40px;
+    }
+
+    &__rigth-title {
+      font-size: 17px;
+      max-width: 100%;
+    }
+
+    &__text-block {
+      display: block;
+    }
+
+    &__text {
+      font-size: 187x;
+    }
+    &__text-left {
+      width: 100%;
+    }
+
+    &__text-right {
+      width: 100%;
+    }
+
+    &__quadro {
+      bottom: -195px;
+      height: 390px;
+    }
+  }
+
+  .section-scroll-two {
+    &__container {
+      width: 500px;
+      min-height: 400px;
+      padding: 40px;
+    }
+
+    &__problem-title {
+      margin: 0;
+    }
+
+    &__problem-text {
+      font-size: 15px;
+      line-height: 150%;
+    }
+
+    &__answer-title {
+      margin-top: 30px;
+      margin: 40px 0 0 0;
+    }
+
+    &__answer-text {
+      font-size: 15px;
+      line-height: 150%;
+    }
+
+    &__author {
+      margin-top: 50px;
+    }
+
+    &__name {
+      font-size: 17px;
+    }
+
+    &__descr {
+      font-size: 15px;
+    }
+  }
 }
 
 @media (max-width: 1195px) {
+  .footer {
+    &__title {
+  font-size: 40px;
+    }
+  
+    &__container {
+      margin-top: 20px;
+    }
+  
+    &__left {
+      width: calc(35% - 60px);
+      padding: 30px 30px;
+    }
+  
+    &__text {
+      font-size: 16px;
+  margin: 5px;  
+    }
+  
+    &__btn {
+height: 40px;
+margin-top: 20px;    
+    }
+  
+    &__right {
+      width: calc(65% - 20px);
+    }
+  }
+
+
+
+  .our-concept.contact-section {
+    .our-concept__quadro {
+      width: calc(85% - 160px);
+      top: calc(100% - 40px);
+    }
+  }
+
+
+
+  .two-pre-scroll.pre-scroll {
+    margin-top: 500px;
+  }
 
   .pre-scroll {
     &__title {
-  font-size: 43px;
+      font-size: 43px;
     }
-  
+
     &__parts {
       width: 49%;
     }
-  
+
     &__text {
       margin-top: 60px;
       font-size: 17px;
     }
   }
 
-
   .three-block {
-      &__title {
-    font-size: 43px;
-      }
-    
-      &__right {
-        width: 65%;
-        display: block;
-      }
-    
-      &__text {
-        font-size: 17px;
-    width: 100%;
-      }
-    
-      &__text-more {
-    width: 100%;
-      }
-    
-      &__view-more {
-        margin-top: 25px;
-        margin-left: 0;
-        margin-right: auto;
-        height: 40px;
-      }
-    
+    &__title {
+      font-size: 43px;
     }
-    
 
+    &__right {
+      width: 65%;
+      display: block;
+    }
+
+    &__text {
+      font-size: 17px;
+      width: 100%;
+    }
+
+    &__text-more {
+      width: 100%;
+    }
+
+    &__view-more {
+      margin-top: 25px;
+      margin-left: 0;
+      margin-right: auto;
+      height: 40px;
+    }
+  }
 
   .two-block {
     &__left-title {
@@ -220,41 +357,152 @@
       width: calc(50% - 20px);
     }
   }
+
+  .section-scroll {
+    max-width: 650px;
+    margin-right: 50px;
+    &__container {
+      width: calc(100% - 80px);
+      padding: 40px;
+    }
+
+    &__nimber {
+      font-size: 40px;
+    }
+
+    &__bot-cont {
+      min-height: 330px;
+    }
+
+    &__title {
+      font-size: 16px;
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+
+    &__btn-cont {
+      flex: 0 0 180px;
+      margin-left: 30px;
+    }
+
+    &__btn-cont.hidden {
+      display: none;
+    }
+  }
+
+  .our-concept {
+    &__df {
+      display: block;
+    }
+
+    &__title {
+      font-size: 38px;
+    }
+    &__left {
+      width: 0%;
+    }
+
+    &__rigth {
+      width: 100%;
+      transform: translateX(-30px);
+      padding: 60px 30px;
+    }
+
+    &__rigth-title {
+      font-size: 16px;
+    }
+
+    &__text-block {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+    &__text-left {
+      width: 48%;
+    }
+
+    &__text-right {
+      width: 48%;
+    }
+
+    &__buttons-abs {
+      display: block;
+    }
+
+    &__empty {
+      width: 0;
+    }
+
+    &__btns {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    &__btns-left {
+      font-size: 16px;
+      margin-right: 50px;
+      height: 40px;
+    }
+
+    &__btns-right {
+      font-size: 16px;
+      margin-top: 0;
+    }
+
+    &__quadro {
+      width: 85%;
+      height: 350px;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -375px;
+    }
+  }
 }
 
 @media (max-width: 1080px) {
   .pre-scroll {
-   position: relative;
-display: block;  
+    position: relative;
+    display: block;
 
     &__left {
       position: relative;
       width: calc(50%);
       margin: 0 auto;
     }
-  
+
     &__img {
       margin-right: auto;
     }
-  
+
     &__right {
       margin-top: 40px;
       position: relative;
       width: calc(100% - 60px);
     }
-  
+
     &__title {
-  font-size: 40px;
+      font-size: 40px;
     }
     &__text {
       margin-top: 40px;
       font-size: 16px;
     }
   }
-
 }
 
 @media (max-width: 992px) {
+
+  .our-concept.contact-section {
+    margin-bottom: 680px;
+}
+
   .burger__container {
     z-index: 1000;
     width: 55px;
@@ -407,40 +655,105 @@ display: block;
   }
 
   .three-block {
-display: block;
+    display: block;
     margin-top: 100px;
-      &__left {
-        width: 100%;
-      }
-    
-      &__right {
-        margin-top: 30px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-      }
-    
-      &__text {
-    width: 49%;
-      }
-    
-    
-      &__text-more {
-    width: 49%;
-      }
-    
-      &__view-more {
-        margin-left: auto;
-        margin-right: 0;
-      }
-    
-    
+    &__left {
+      width: 100%;
     }
-    
+
+    &__right {
+      margin-top: 30px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    &__text {
+      width: 49%;
+    }
+
+    &__text-more {
+      width: 49%;
+    }
+
+    &__view-more {
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+
+  .contact {
+    padding: 40px;
+
+    &__title {
+      font-size: 28px;
+    }
+
+    &__text {
+      font-size: 17px;
+    }
+
+    &__form {
+      margin-top: 50px;
+    }
+
+    &__form-input {
+      font-size: 17px;
+    }
+
+    &__form-btn {
+      max-width: 300px;
+      height: 60px;
+      margin: 60px auto 10px auto;
+    }
+  }
 }
 
 @media (max-width: 767px) {
+
+  .our-concept.contact-section {
+    margin-bottom: 580px;
+}
+  .footer {
+    &__title {
+  font-size: 22px;
+    }
+  
+    &__container {
+      margin-top: 10px;
+      display: block;
+    }
+  
+    &__left {
+      width: calc(100% - 60px);
+      padding: 30px;
+      height: auto;
+    }
+    &__right {
+      width: 100%;
+    }
+    &__img {
+      height: 180px;
+    }
+  }
+
+
+
+  .two-pre-scroll.pre-scroll {
+    margin-top: 400px;
+  }
+
+  .our-concept.contact-section {
+    .contact__title {
+      font-size: 22px;
+    }
+    .our-concept__quadro {
+      padding: 20px;
+      width: calc(100% - 80px);
+    }
+  }
+
   .container {
     padding-left: 15px;
     padding-right: 15px;
@@ -516,44 +829,43 @@ display: block;
     }
   }
 
-
   .video-block {
     &__right {
       padding: 40px 15px;
       display: block;
     }
-  
+
     &__title {
       width: 100%;
     }
-  
+
     &__text-block {
       width: 100%;
     }
-  
+
     &__bot-text {
       margin-top: 40px;
     }
   }
 
-   .three-block {
+  .three-block {
     &__title {
-  font-size: 43px;
+      font-size: 43px;
     }
-  
+
     &__right {
       display: block;
     }
-  
+
     &__text {
       font-size: 16px;
-  width: 100%;
+      width: 100%;
     }
-  
+
     &__text-more {
-  width: 100%;
+      width: 100%;
     }
-  
+
     &__view-more {
       margin-left: 0;
       margin-right: auto;
@@ -562,39 +874,113 @@ display: block;
   }
 
   .pre-scroll {
-
-    &__bg{
-     right: 0;
+    &__bg {
+      right: 0;
     }
 
     &__parts {
       width: 100%;
       margin-top: 25px !important;
     }
-  
+
     &__right {
       width: 100%;
-margin-top: 0;
-padding: 0;
+      margin-top: 0;
+      padding: 0;
     }
-  
+
     &__text {
       margin-top: auto;
     }
 
-    
-  &__btn a{
-font-size: 16px;
-  }
+    &__btn a {
+      font-size: 16px;
+    }
   }
 
+  .section-scroll {
+    max-width: 450px;
+    margin-right: 35px;
+    &__container {
+      width: calc(100% - 40px);
+      padding: 20px;
+    }
+    &__nimber {
+      font-size: 30px;
+    }
+    &__icon {
+      width: 50px;
+    }
+
+    &__bot-cont {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+      min-height: 300px;
+    }
+
+    &__text {
+      line-height: 150%;
+    }
+
+    &__btn-cont {
+      flex: none;
+      margin-left: 0px;
+      width: 200px;
+    }
+
+    &__view-more-btn {
+      height: 40px;
+    }
+  }
+
+  .our-concept {
+    &__text-block {
+      display: block;
+    }
+
+    &__text-left {
+      width: 100%;
+    }
+
+    &__text-right {
+      width: 100%;
+    }
+
+    &__quadro {
+      width: 85%;
+      height: 300px;
+      bottom: -320px;
+    }
+  }
+
+  .section-scroll-two {
+    &__container {
+      width: 360px;
+    }
+
+    &__ava {
+      width: 80px;
+      height: 80px;
+    }
+  }
 }
 
 @media (max-width: 500px) {
 
+  .our-concept.contact-section {
+    margin-bottom: 700px;
+}
+
+  .two-pre-scroll.pre-scroll {
+    margin-top: 250px;
+    margin-bottom: 0px;
+  }
+
   .three-block {
     &__title {
-  font-size: 33px;
+      font-size: 33px;
     }
   }
   .welcome {
@@ -634,12 +1020,104 @@ font-size: 16px;
       margin-top: 35px;
     }
   }
-
   .video-block {
-
-  
     &__left {
       width: 75%;
     }
   }
+
+  .section-scroll {
+    max-width: 290px;
+    margin-right: 30px;
+    &__bot-cont {
+      min-height: 350px;
+    }
+
+    &__btn-cont {
+      max-width: none;
+      width: 100%;
+    }
+  }
+
+  .our-concept {
+    margin-top: 50px;
+    &__title {
+      font-size: 24px;
+    }
+
+    &__btns {
+      width: 30px;
+      width: 100%;
+      display: block;
+    }
+
+    &__btns-left {
+      margin-right: 0px;
+      max-width: none;
+      width: auto;
+    }
+
+    &__btns-right {
+      margin-top: 25px;
+      text-align: center;
+      width: 100%;
+    }
+
+    &__quadro {
+      height: 180px;
+      bottom: -195px;
+    }
+  }
+
+  .section-scroll-two {
+    &__container {
+      width: 280px;
+      padding: 15px;
+    }
+    &__answer-title {
+      margin-top: 20px;
+    }
+    &__author-text {
+      margin-left: 15px;
+    }
+
+    &__author {
+      margin-top: 35px;
+    }
+  }
+
+
+  .contact {
+    &__text {
+      font-size: 16px;
+    }
+  
+    // &__form {
+      // margin-top: 100px;
+    // }
+  
+    &__form-row {
+    display: block;
+    margin-top: 0px;
+    }
+   
+    &__form-input {
+      display: block;
+      width: calc(100% - 20px);
+      margin-top: 15px;
+    }
+  
+    &__form-btn {
+      max-width: 240px;
+      height: 55px;
+      margin: 40px auto 10px auto;
+      font-size: 16px;
+    }
+  
+    &__custom-select {
+      margin-top: 15px;
+      position: relative;
+    }
+  }
+
 }
