@@ -1,7 +1,7 @@
-*{
+* {
   font-family: Arial;
-font-style: normal;
-font-weight: normal;
+  font-style: normal;
+  font-weight: normal;
 }
 
 .container {
@@ -11,58 +11,110 @@ font-weight: normal;
   padding-right: 30px;
 }
 
-.standart-title{
-  font-family: 'Times New Roman';
-font-style: normal;
-font-weight: bold;
-font-size: 58px;
-line-height: 130%;
-letter-spacing: 0.09em;
+.standart-title {
+  font-family: "Times New Roman";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 58px;
+  line-height: 130%;
+  letter-spacing: 0.09em;
 }
 
 .standart-button-link {
-  border: 1px solid #C9AF6E;
+  border: 1px solid #c9af6e;
   border-radius: 4px;
   font-family: Arial;
-font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: 140%;
-letter-spacing: 0.09em;
-color: #C9AF6E;
-display: flex;
-justify-content: center;
-text-align: center;
-align-items: center;
-max-width: 255px;
-padding: 10px;
-height: 50px;
-transition: all .3s;
-cursor: pointer;
-&:hover{
-  color: #F5C860;
-  border-color: #F5C860;;
-}
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: 0.09em;
+  color: #c9af6e;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  max-width: 255px;
+  padding: 10px;
+  height: 50px;
+  transition: all 0.3s;
+  cursor: pointer;
+  &:hover {
+    color: #f5c860;
+    border-color: #f5c860;
+  }
 }
 
-
-.inherit-block{
+.inherit-block {
   font-family: inherit;
-font-style: inherit;
-font-weight: inherit;
-font-size: inherit;
-line-height: inherit;
-letter-spacing: inherit;
-text-transform: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
 }
 
-
-body{
+body {
   overflow-x: hidden;
   max-width: 2000px;
   margin: 0 auto;
   overflow-y: visible;
 }
-html{
-  overflow-x: hidden
+html {
+  overflow-x: hidden;
 }
+
+.tooltip {
+  transform: translate(-50%, -100%);
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 50%;
+  text-align: center;
+  width: 121px;
+  height: 121px;
+  background: #c9af6e;
+  border-radius: 100%;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 121px;
+  text-align: center;
+  letter-spacing: 0.09em;
+  color: #ffffff;
+  pointer-events: none;
+}
+
+.image__animation-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.image__animation-block {
+  background: rgb(201, 175, 110);
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  z-index: 0;
+  right: 0px;
+}
+
+img.image__animation {
+  z-index: 1;
+  height: 10px;
+  position: relative;
+}
+
+// animation img
+img.horizontal-block__right {
+  height: 10px;
+  z-index: 1;
+  width: 100%;
+  object-fit: cover;
+  
+}
+
+

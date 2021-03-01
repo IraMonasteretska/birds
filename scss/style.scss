@@ -288,11 +288,11 @@
     object-fit: cover;
   }
 
-  &__right {
-    width: calc(65%);
-    object-fit: cover;
+  &__right-cont {
+    width: calc(65% );
     height: 100%;
   }
+  
 }
 
 .video-block {
@@ -441,7 +441,7 @@
   align-items: flex-end;
   margin-top: 120px;
   position: relative;
-
+margin-bottom: 90px;
   &__bg {
     position: absolute;
     z-index: 0;
@@ -456,14 +456,24 @@
   &__left {
     width: calc(35% - 60px);
     z-index: 2;
+    height: 530px;
   }
 
   &__img {
-    max-width: 430px;
     width: 100%;
-    max-height: 550px;
     object-fit: cover;
     display: block;
+    height: 100%;
+
+  }
+  &__left-container{
+    height: 530px;
+    max-width: 430px;
+    position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+    width: 100%;
     margin-left: 120px;
   }
 
@@ -714,7 +724,6 @@
   
   &__quadro {
     position: absolute;
-    background: #000;
     width: calc(35% + (65% * 0.43) - 120px);
     height: 550px;
     left: 150px;
@@ -1006,6 +1015,7 @@ margin: 5px;
 
   &__right {
     width: calc(65% - 30px);
+    height: 255px ;
   }
 
   &__img {
