@@ -60,34 +60,48 @@ $(".two-block__slider").on(
 //end slick slider - two-block
 
 // start scroll animation - first
-if(document.querySelector('.first-sections-scroll')){
-var controller = new ScrollMagic.Controller();
+if (document.querySelector('.first-sections-scroll')) {
+  var controller = new ScrollMagic.Controller();
 
 
-if (window.matchMedia("(min-width: 700px)").matches) {
-var horizontalSlide = new TimelineMax()
-  .to(".first-sections-scroll", 1, { x: "-80%" })
-} 
-else if  (window.matchMedia("(max-width: 700px)").matches) {
-var horizontalSlide = new TimelineMax()
-  .to(".first-sections-scroll", 1, { x: "-90%" })
-}
-else if (window.matchMedia("(max-width: 400px)").matches) {
-var horizontalSlide = new TimelineMax()
-  .to(".first-sections-scroll", 1, { x: "-100%" })
-}
-new ScrollMagic.Scene({
-  triggerElement: ".first-wrapper-scroll",
-  triggerHook: "onLeave",
-  duration: "400%"
-})
-  .setPin(".first-wrapper-scroll")
-  .setTween(horizontalSlide)
-  .addTo(controller);
+  if (window.matchMedia("(min-width: 700px)").matches) {
+    var horizontalSlide = new TimelineMax()
+      .to(".first-sections-scroll", 1, { x: "-80%" })
+  }
+  else if (window.matchMedia("(max-width: 700px)").matches) {
+    var horizontalSlide = new TimelineMax()
+      .to(".first-sections-scroll", 1, { x: "-90%" })
+  }
+  else if (window.matchMedia("(max-width: 400px)").matches) {
+    var horizontalSlide = new TimelineMax()
+      .to(".first-sections-scroll", 1, { x: "-100%" })
+  }
+  new ScrollMagic.Scene({
+    triggerElement: ".first-wrapper-scroll",
+    triggerHook: "onLeave",
+    duration: "400%"
+  })
+    .setPin(".first-wrapper-scroll")
+    .setTween(horizontalSlide)
+    .addTo(controller);
 
-let sections = document.querySelector('.first-sections-scroll')
-let section = document.querySelectorAll('.section-scroll')
-sections.style.width = section[0].offsetWidth * section.length + 'px'
+  let sections = document.querySelector('.first-sections-scroll')
+  let section = document.querySelectorAll('.section-scroll')
+
+
+
+  if (window.matchMedia("(min-width: 700px)").matches) {
+    sections.style.width = section[0].offsetWidth * section.length + 400 + 'px'
+  }
+  else if (window.matchMedia("(max-width: 350px)").matches) {
+    sections.style.width = section[0].offsetWidth * section.length + 100 + 'px'
+  }
+  else if (window.matchMedia("(max-width: 700px)").matches) {
+    sections.style.width = section[0].offsetWidth * section.length + 'px'
+  }
+
+
+
 }
 //show more text
 let sectionScrollContainer = document.querySelectorAll('.section-scroll__bot-cont')
@@ -108,35 +122,35 @@ for (let i = 0; i < sectionScrollContainer.length; i++) {
 // end scroll animation - first
 
 // start scroll animation - two
-if(document.querySelector('.two-sections-scroll')){
-var controller = new ScrollMagic.Controller();
- if (window.matchMedia("(min-width: 700px)").matches) {
-  var horizontalSlide = new TimelineMax()
-    .to(".two-sections-scroll", 1, { x: "-80%" })
- }
-else if (window.matchMedia("(max-width: 700px)").matches) {
-  var horizontalSlide = new TimelineMax()
-    .to(".two-sections-scroll", 1, { x: "-90%" })
+if (document.querySelector('.two-sections-scroll')) {
+  var controller = new ScrollMagic.Controller();
+  if (window.matchMedia("(min-width: 700px)").matches) {
+    var horizontalSlide = new TimelineMax()
+      .to(".two-sections-scroll", 1, { x: "-80%" })
   }
-else if (window.matchMedia("(max-width: 450px)").matches) {
-  var horizontalSlide = new TimelineMax()
-    .to(".two-sections-scroll", 1, { x: "-100%" })
+  else if (window.matchMedia("(max-width: 700px)").matches) {
+    var horizontalSlide = new TimelineMax()
+      .to(".two-sections-scroll", 1, { x: "-90%" })
+  }
+  else if (window.matchMedia("(max-width: 450px)").matches) {
+    var horizontalSlide = new TimelineMax()
+      .to(".two-sections-scroll", 1, { x: "-100%" })
   }
 
-  
 
-new ScrollMagic.Scene({
-  triggerElement: ".two-wrapper-scroll",
-  triggerHook: "onLeave",
-  duration: "400%"
-})
-  .setPin(".two-wrapper-scroll")
-  .setTween(horizontalSlide)
-  .addTo(controller);
 
-let sections = document.querySelector('.two-sections-scroll')
-let section = document.querySelectorAll('.section-scroll-two')
-sections.style.width = section[0].offsetWidth * section.length + 'px'
+  new ScrollMagic.Scene({
+    triggerElement: ".two-wrapper-scroll",
+    triggerHook: "onLeave",
+    duration: "400%"
+  })
+    .setPin(".two-wrapper-scroll")
+    .setTween(horizontalSlide)
+    .addTo(controller);
+
+  let sections = document.querySelector('.two-sections-scroll')
+  let section = document.querySelectorAll('.section-scroll-two')
+  sections.style.width = section[0].offsetWidth * section.length + 'px'
 }
 // end scroll animation - two
 
@@ -146,15 +160,15 @@ var scene = new ScrollMagic.Scene({
   triggerElement: '.horizontal-block__right-cont',
   triggerHook: 'onEnter'
 })
-.setTween('.horizontal-block__right', 1, {height: '100%',delay: 1}, {duration: 500}) 
-.addTo(controller);
+  .setTween('.horizontal-block__right', 1, { height: '100%', delay: 1 }, { duration: 500 })
+  .addTo(controller);
 
 var scene = new ScrollMagic.Scene({
   triggerElement: '.horizontal-block__right-cont',
   triggerHook: 'onEnter'
 })
-.setTween('.horizontal-block__animation-blok', 1, {height: '100%'}, {duration: 500}) 
-.addTo(controller);
+  .setTween('.horizontal-block__animation-blok', 1, { height: '100%' }, { duration: 500 })
+  .addTo(controller);
 
 
 // pre-scroll block animation
@@ -162,15 +176,15 @@ var scene = new ScrollMagic.Scene({
   triggerElement: '.pre-scroll__left-first',
   triggerHook: 'onEnter'
 })
-.setTween('.pre-scroll__img-first', 1, {height: '100%',delay: 1}, {duration: 500}) 
-.addTo(controller);
+  .setTween('.pre-scroll__img-first', 1, { height: '100%', delay: 1 }, { duration: 500 })
+  .addTo(controller);
 
 var scene = new ScrollMagic.Scene({
   triggerElement: '.pre-scroll__left-first',
   triggerHook: 'onEnter'
 })
-.setTween('.pre-scroll__block-first', 1, {height: '100%'}, {duration: 500}) 
-.addTo(controller);
+  .setTween('.pre-scroll__block-first', 1, { height: '100%' }, { duration: 500 })
+  .addTo(controller);
 
 
 // pre-scroll two block animation
@@ -178,15 +192,15 @@ var scene = new ScrollMagic.Scene({
   triggerElement: '.pre-scroll__left-two',
   triggerHook: 'onEnter'
 })
-.setTween('.pre-scroll__img-two', 1, {height: '100%',delay: 1}, {duration: 500}) 
-.addTo(controller);
+  .setTween('.pre-scroll__img-two', 1, { height: '100%', delay: 1 }, { duration: 500 })
+  .addTo(controller);
 
 var scene = new ScrollMagic.Scene({
   triggerElement: '.pre-scroll__left-two',
   triggerHook: 'onEnter'
 })
-.setTween('.pre-scroll__block-two', 1, {height: '100%'}, {duration: 500}) 
-.addTo(controller);
+  .setTween('.pre-scroll__block-two', 1, { height: '100%' }, { duration: 500 })
+  .addTo(controller);
 
 
 // our-concept block animation
@@ -194,15 +208,15 @@ var scene = new ScrollMagic.Scene({
   triggerElement: '.our-concept__quadro-first',
   triggerHook: 'onEnter'
 })
-.setTween('.our-concept__quadro-img', 1, {height: '100%',delay: 1}, {duration: 500}) 
-.addTo(controller);
+  .setTween('.our-concept__quadro-img', 1, { height: '100%', delay: 1 }, { duration: 500 })
+  .addTo(controller);
 
 var scene = new ScrollMagic.Scene({
   triggerElement: '.our-concept__quadro-first',
   triggerHook: 'onEnter'
 })
-.setTween('.image__animation-block-quadro-first', 1, {height: '100%'}, {duration: 500}) 
-.addTo(controller);
+  .setTween('.image__animation-block-quadro-first', 1, { height: '100%' }, { duration: 500 })
+  .addTo(controller);
 
 
 // footer block animation
@@ -210,12 +224,12 @@ var scene = new ScrollMagic.Scene({
   triggerElement: '.footer__right',
   triggerHook: 'onEnter'
 })
-.setTween('.footer__img', 1, {height: '100%',delay: 1}, {duration: 500}) 
-.addTo(controller);
+  .setTween('.footer__img', 1, { height: '100%', delay: 1 }, { duration: 500 })
+  .addTo(controller);
 
 var scene = new ScrollMagic.Scene({
   triggerElement: '.footer__right',
   triggerHook: 'onEnter'
 })
-.setTween('.image__animation-block-footer', 1, {height: '100%'}, {duration: 500}) 
-.addTo(controller);
+  .setTween('.image__animation-block-footer', 1, { height: '100%' }, { duration: 500 })
+  .addTo(controller);
