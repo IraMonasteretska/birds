@@ -100,12 +100,8 @@ if (document.querySelector('.first-sections-scroll')) {
     sections.style.width = section[0].offsetWidth * section.length + 'px'
   }
 
-
-
-}
 //show more text
 let sectionScrollContainer = document.querySelectorAll('.section-scroll__bot-cont')
-
 for (let i = 0; i < sectionScrollContainer.length; i++) {
   let button = sectionScrollContainer[i].querySelector('.section-scroll__view-more-btn')
   let text = sectionScrollContainer[i].querySelector('.section-scroll__text.hidden')
@@ -118,6 +114,9 @@ for (let i = 0; i < sectionScrollContainer.length; i++) {
     btnCont.classList.add('hidden')
   })
 }
+
+}
+
 
 // end scroll animation - first
 
@@ -150,7 +149,12 @@ if (document.querySelector('.two-sections-scroll')) {
 
   let sections = document.querySelector('.two-sections-scroll')
   let section = document.querySelectorAll('.section-scroll-two')
-  sections.style.width = section[0].offsetWidth * section.length + 'px'
+  if (window.matchMedia("(min-width: 1000px)").matches) {
+    sections.style.width = section[0].offsetWidth * section.length - 600 + 'px'
+  }
+  else if (window.matchMedia("(max-width: 1000px)").matches) {
+    sections.style.width = section[0].offsetWidth * section.length +  'px'
+  }
 }
 // end scroll animation - two
 
@@ -160,15 +164,33 @@ var scene = new ScrollMagic.Scene({
   triggerElement: '.horizontal-block__right-cont',
   triggerHook: 'onEnter'
 })
-  .setTween('.horizontal-block__right', 1, { height: '100%', delay: 1 }, { duration: 500 })
+  .setTween('.horizontal-block__right', .4, { height: '100%', delay: .3 }, { duration: 10 })
   .addTo(controller);
 
 var scene = new ScrollMagic.Scene({
   triggerElement: '.horizontal-block__right-cont',
   triggerHook: 'onEnter'
 })
-  .setTween('.horizontal-block__animation-blok', 1, { height: '100%' }, { duration: 500 })
+  .setTween('.horizontal-block__animation-blok', .4, { height: '100%' }, { duration: 50 })
   .addTo(controller);
+
+
+var scene = new ScrollMagic.Scene({
+  triggerElement: '.horizontal-block__left-cont',
+  triggerHook: 'onEnter'
+})
+  .setTween('.horizontal-block__left', .4, { height: '100%', delay: .3 }, { duration: 10 })
+  .addTo(controller);
+
+var scene = new ScrollMagic.Scene({
+  triggerElement: '.horizontal-block__left-cont',
+  triggerHook: 'onEnter'
+})
+  .setTween('.horizontal-block__animation-blok-left', .4, { height: '100%' }, { duration: 50 })
+  .addTo(controller);
+
+
+
 
 
 // pre-scroll block animation
@@ -176,14 +198,14 @@ var scene = new ScrollMagic.Scene({
   triggerElement: '.pre-scroll__left-first',
   triggerHook: 'onEnter'
 })
-  .setTween('.pre-scroll__img-first', 1, { height: '100%', delay: 1 }, { duration: 500 })
+  .setTween('.pre-scroll__img-first', .4, { height: '100%', delay: .3 }, { duration: 500 })
   .addTo(controller);
 
 var scene = new ScrollMagic.Scene({
   triggerElement: '.pre-scroll__left-first',
   triggerHook: 'onEnter'
 })
-  .setTween('.pre-scroll__block-first', 1, { height: '100%' }, { duration: 500 })
+  .setTween('.pre-scroll__block-first', .4, { height: '100%' }, { duration: 500 })
   .addTo(controller);
 
 
@@ -192,14 +214,14 @@ var scene = new ScrollMagic.Scene({
   triggerElement: '.pre-scroll__left-two',
   triggerHook: 'onEnter'
 })
-  .setTween('.pre-scroll__img-two', 1, { height: '100%', delay: 1 }, { duration: 500 })
+  .setTween('.pre-scroll__img-two', .4, { height: '100%', delay: .3 }, { duration: 500 })
   .addTo(controller);
 
 var scene = new ScrollMagic.Scene({
   triggerElement: '.pre-scroll__left-two',
   triggerHook: 'onEnter'
 })
-  .setTween('.pre-scroll__block-two', 1, { height: '100%' }, { duration: 500 })
+  .setTween('.pre-scroll__block-two', .4, { height: '100%' }, { duration: 500 })
   .addTo(controller);
 
 
@@ -208,28 +230,49 @@ var scene = new ScrollMagic.Scene({
   triggerElement: '.our-concept__quadro-first',
   triggerHook: 'onEnter'
 })
-  .setTween('.our-concept__quadro-img', 1, { height: '100%', delay: 1 }, { duration: 500 })
+  .setTween('.our-concept__quadro-img', .4, { height: '100%', delay: .3 }, { duration: 500 })
   .addTo(controller);
 
 var scene = new ScrollMagic.Scene({
   triggerElement: '.our-concept__quadro-first',
   triggerHook: 'onEnter'
 })
-  .setTween('.image__animation-block-quadro-first', 1, { height: '100%' }, { duration: 500 })
+  .setTween('.image__animation-block-quadro-first', .4, { height: '100%' }, { duration: 500 })
   .addTo(controller);
 
+var scene = new ScrollMagic.Scene({
+  triggerElement: '.our-concept__quadro-first',
+  triggerHook: 'onEnter'
+})
+  .setTween('.our-concept__quadro-gradient', .4, { height: '100%', delay: .3 }, { duration: 500 })
+  .addTo(controller);
 
 // footer block animation
 var scene = new ScrollMagic.Scene({
   triggerElement: '.footer__right',
   triggerHook: 'onEnter'
 })
-  .setTween('.footer__img', 1, { height: '100%', delay: 1 }, { duration: 500 })
+  .setTween('.footer__img', .4, { height: '100%', delay: .3 }, { duration: 500 })
   .addTo(controller);
 
 var scene = new ScrollMagic.Scene({
   triggerElement: '.footer__right',
   triggerHook: 'onEnter'
 })
-  .setTween('.image__animation-block-footer', 1, { height: '100%' }, { duration: 500 })
+  .setTween('.image__animation-block-footer', .4, { height: '100%' }, { duration: 500 })
   .addTo(controller);
+
+
+
+
+  // end slick slider - blog
+$(".slider-blog__slider").slick({
+  slidesToShow: 1,
+  speed: 1000,
+  infinite: true,
+  arrows: true,
+  focusOnSelect: false,
+  prevArrow: '<div class="slick-prev slick-arrow">Prev</div>',
+});
+
+  // end slick slider - blog

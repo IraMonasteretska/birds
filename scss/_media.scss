@@ -503,6 +503,12 @@ margin-top: 20px;
     margin-bottom: 680px;
 }
 
+
+.our-concept__quadro-letters{
+  font-size: 80px;
+  bottom: -15px;
+}
+
   .burger__container {
     z-index: 1000;
     width: 55px;
@@ -640,7 +646,7 @@ margin-top: 20px;
   .horizontal-block {
     flex-direction: column;
     height: auto;
-    &__left {
+    &__left-cont {
       margin-right: 0px;
       max-width: 400px;
       height: 150px;
@@ -718,6 +724,12 @@ margin-top: 20px;
 
 @media (max-width: 767px) {
 
+
+
+  .our-concept__quadro-letters{
+    font-size: 60px;
+    bottom: -10px;
+  }
   .our-concept.contact-section {
     margin-bottom: 580px;
 }
@@ -982,7 +994,10 @@ margin-top: 20px;
 }
 
 @media (max-width: 500px) {
-
+  .our-concept__quadro-letters{
+    font-size: 40px;
+     bottom: -5px;
+  }
   .our-concept.contact-section {
     margin-bottom: 700px;
 }
