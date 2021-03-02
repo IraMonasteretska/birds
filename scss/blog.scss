@@ -339,10 +339,6 @@ cursor: pointer;
         align-items: center;
         width: 35%;
     }
-
-    &__pag-arrow-prev {
-    }
-
     &__pag-arrow {
         font-weight: bold;
 font-size: 18px;
@@ -361,9 +357,6 @@ color: #C9AF6E;
         background: #313231;
         content: "";
         width: 70%;
-    }
-
-    &__pag-arrow-next {
     }
 }
 

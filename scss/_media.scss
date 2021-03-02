@@ -296,6 +296,10 @@
   }
 
 
+  .blog__pag-arrow-line{
+    width: 55%;
+  }
+
   .blog {
     &__info {
       img {
@@ -638,6 +642,30 @@
   .footer__title {
     font-size: 30px;
   }
+
+  .blog{
+  &__pag-item {
+font-size: 16px;
+  }
+
+  &__pag-arrows {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 40%;
+  }
+  &__pag-arrow {
+font-size: 16px;
+  }
+
+  &__pag-arrow-line {
+      height: 1px;
+      background: #313231;
+      content: "";
+      width: 60%;
+  }
+}
+
 
 
   .our-concept.contact-section {

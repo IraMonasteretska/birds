@@ -928,6 +928,9 @@ margin-bottom: 90px;
   &__form-select {
     width: calc(100% - 20px);
     cursor: pointer;
+    &:focus::placeholder {
+      color: rgba(49, 50, 49, 0.6);
+    }
   }
 
   &__svg{
