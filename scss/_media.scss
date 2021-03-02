@@ -594,6 +594,11 @@
       transform: translateX(-50%);
       bottom: -425px;
     }
+
+    &__quadro-first.our-concept__quadro{
+      width: 100%;
+      bottom: -350px;
+    }
   }
 }
 
@@ -895,6 +900,11 @@
 }
 
 @media (max-width: 767px) {
+
+  .our-concept__quadro-first.our-concept__quadro{
+    bottom: -300px;
+  }
+
   .standart-button-link, .our-concept__btns-right, .welcome__right-btn {
    font-size: 14px !important;
   }
@@ -1249,6 +1259,10 @@ background: rgba(255, 255, 255, 0.4);
 
   .our-concept {
     margin-bottom: 270px;
+}
+
+.our-concept__quadro-first.our-concept__quadro{
+  bottom: -180px;
 }
 
   .our-concept.contact-section {
