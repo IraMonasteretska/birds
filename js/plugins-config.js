@@ -265,7 +265,7 @@ var scene = new ScrollMagic.Scene({
 
 
 
-  // end slick slider - blog
+  // start slick slider - blog
 $(".slider-blog__slider").slick({
   slidesToShow: 1,
   speed: 1000,

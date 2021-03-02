@@ -35,11 +35,18 @@ if (document.querySelector('.three-block__text')) {
 if (document.querySelector('.contact__form-select')) {
   let select = document.querySelector('.contact__form-select')
   let selectSvg = document.querySelector('.contact__svg')
+  let selectSvg_ = document.querySelector('.contact__svg svg')
+  let selectSvg__ = document.querySelector('.contact__svg path')
   let optionsCont = document.querySelector('.contact__select-options')
 
 
   //open select
   select.addEventListener('click', () => {
+    optionsCont.classList.toggle('active')
+    selectSvg.classList.toggle('active')
+  })
+
+  selectSvg.addEventListener('click', () => {
     optionsCont.classList.toggle('active')
     selectSvg.classList.toggle('active')
   })
@@ -56,7 +63,10 @@ if (document.querySelector('.contact__form-select')) {
     let target = e.target
     if (!target.classList.contains('contact__select-option') &&
       !target.classList.contains('contact__form-select') &&
-      !target.classList.contains('contact__svg')) {
+      !target.classList.contains('contact__svg') &&
+      target != selectSvg_ &&
+      target != selectSvg__ )   {
+          console.log(target);
       optionsCont.classList.remove('active')
       selectSvg.classList.remove('active')
     }

@@ -1,9 +1,8 @@
 //media
 @media (max-width: 1610px) {
-
-.pre-scroll__left-container {
-  margin-left: 0;
-}
+  .pre-scroll__left-container {
+    margin-left: 0;
+  }
   .first-section-scroll {
     flex: 0 0 30px;
   }
@@ -84,6 +83,63 @@
 }
 
 @media (max-width: 1370px) {
+  
+  .slider-blog {
+    &__title {
+      font-size: 52px;
+      line-height: 135%;
+    }
+
+    &__upslider-title {
+      font-size: 40px;
+    }
+
+
+    &__item-title {
+      font-size: 24px;
+    }
+
+    &__item-text {
+      font-size: 16px;
+    }
+
+    &__item-info {
+      margin-top: 20px;
+      margin-bottom: 15px;
+    }
+
+    &__info-title {
+      font-size: 16px;
+    }
+
+    &__info-date {
+      font-size: 15px;
+    }
+
+    &__elipse {
+      margin-right: 15px;
+      margin-left: 15px;
+    }
+    &__info-read {
+      font-size: 15px;
+    }
+    &__right-title {
+      font-size: 40px;
+    }
+
+    &__trends-item {
+      margin-top: 25px;
+    }
+
+    &__trends-date {
+      font-size: 15px;
+    }
+
+    &__trends-title {
+      font-size: 16px;
+    }
+  }
+
   .header {
     &__logo {
       a {
@@ -228,36 +284,82 @@
 }
 
 @media (max-width: 1195px) {
+
+  .slider-blog {
+    &__title {
+      font-size: 48px;
+    }
+
+    &__item {
+      height: 400px !important;
+  }
+
+    &__upslider-title {
+      font-size: 35px;
+    }
+
+
+    &__item-title {
+      font-size: 19px;
+    }
+
+    &__item-text {
+     margin-top: 15px;
+      font-size: 15px;
+    }
+
+    &__item-info {
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }
+
+    &__info-title {
+      font-size: 15px;
+    }
+   
+    &__right-title {
+      font-size: 35px;
+    }
+
+    &__trends-item {
+      margin-top: 20px;
+    }
+
+  
+  
+    &__trends-title {
+      font-size: 14px;
+    }
+  }
+
   .footer {
     &__title {
-  font-size: 40px;
+      font-size: 40px;
     }
-  
+
     &__container {
       margin-top: 20px;
     }
-  
+
     &__left {
       width: calc(35% - 60px);
       padding: 30px 30px;
     }
-  
+
     &__text {
       font-size: 16px;
-  margin: 5px;  
+      margin: 5px;
     }
-  
+
     &__btn {
-height: 40px;
-margin-top: 20px;    
+      height: 40px;
+      margin-top: 20px;
     }
-  
+
     &__right {
       width: calc(65% - 20px);
     }
   }
-
-
 
   .our-concept.contact-section {
     .our-concept__quadro {
@@ -265,8 +367,6 @@ margin-top: 20px;
       top: calc(100% - 40px);
     }
   }
-
-
 
   .two-pre-scroll.pre-scroll {
     margin-top: 500px;
@@ -461,16 +561,12 @@ margin-top: 20px;
       height: 350px;
       left: 50%;
       transform: translateX(-50%);
-      bottom: -375px;
+      bottom: -425px;
     }
   }
 }
 
 @media (max-width: 1080px) {
-
-
-
-
   .pre-scroll {
     position: relative;
     display: block;
@@ -498,16 +594,14 @@ margin-top: 20px;
 }
 
 @media (max-width: 992px) {
-
   .our-concept.contact-section {
     margin-bottom: 680px;
-}
+  }
 
-
-.our-concept__quadro-letters{
-  font-size: 80px;
-  bottom: -15px;
-}
+  .our-concept__quadro-letters {
+    font-size: 80px;
+    bottom: -15px;
+  }
 
   .burger__container {
     z-index: 1000;
@@ -572,7 +666,7 @@ margin-top: 20px;
     transform: translateY(0vh);
     a {
       display: block;
-      margin-top: 20px;
+      margin-top: 40px;
       font-size: 18px;
     }
   }
@@ -715,34 +809,61 @@ margin-top: 20px;
     }
   }
 
-  .pre-scroll__left, .pre-scroll__left-container {
+  .pre-scroll__left,
+  .pre-scroll__left-container {
     height: 400px;
-}
+  }
 
+
+  .slider-blog {
+    margin: 170px auto 0 auto;
+    &::before{
+        bottom: -120px;
+        height: 200px;
+    }
+
+    &__title {
+        font-size: 30px;
+    }
+
+    &__container {
+flex-direction: column-reverse;
+    }
+
+    &_left {
+        width: 100%;
+    }
+
+    &__right {
+        width: 100%;
+    }
+  
+    &__trends {
+        margin-bottom: 10px;
+        max-width: 450px;
+    }
+}
 
 }
 
 @media (max-width: 767px) {
-
-
-
-  .our-concept__quadro-letters{
+  .our-concept__quadro-letters {
     font-size: 60px;
     bottom: -10px;
   }
   .our-concept.contact-section {
     margin-bottom: 580px;
-}
+  }
   .footer {
     &__title {
-  font-size: 22px;
+      font-size: 22px;
     }
-  
+
     &__container {
       margin-top: 10px;
       display: block;
     }
-  
+
     &__left {
       width: calc(100% - 60px);
       padding: 30px;
@@ -751,15 +872,13 @@ margin-top: 20px;
     &__right {
       width: 100%;
       height: 150px;
+      margin-top: 20px;
     }
-
 
     &__img {
       height: 180px;
     }
   }
-
-
 
   .two-pre-scroll.pre-scroll {
     margin-top: 400px;
@@ -991,16 +1110,78 @@ margin-top: 20px;
       height: 80px;
     }
   }
+
+  .slider-blog__slider{
+    &:before{
+        width: 70%;
+    }
+}
+}
+@media (max-width: 600px) {
+  .slider-blog {
+  &__item {
+    display: flex !important;
+    height: auto !important;
+    flex-direction: column;
 }
 
+&__item-img-cont {
+  width: 60%;
+  margin: 0 auto ;
+  height: 300px;
+}
+
+&__item-texts {
+  margin-top: 40px;
+  width: 100%;
+}
+
+&__item-info {
+  margin: 20px 0 15px 15px;
+}
+
+
+  }
+
+  
+
+}
 @media (max-width: 500px) {
-  .our-concept__quadro-letters{
+
+  .slider-blog__slider{
+    &:before{
+        width: 55%;
+    }
+}
+
+  .slider-blog {
+  &__item-img-cont {
+    width: 75%;
+   } 
+  }
+
+
+  .two-block__left-title,
+  .video-block__title {
+    font-size: 32px;
+  }
+
+  .pre-scroll__title {
+    font-size: 26px;
+  }
+
+  .pre-scroll__left,
+  .pre-scroll__left-container {
+    height: 320px;
+  }
+
+  .our-concept__quadro-letters {
     font-size: 40px;
-     bottom: -5px;
+    bottom: -5px;
   }
   .our-concept.contact-section {
     margin-bottom: 700px;
-}
+  }
 
   .two-pre-scroll.pre-scroll {
     margin-top: 250px;
@@ -1115,44 +1296,47 @@ margin-top: 20px;
     }
   }
 
-
   .contact {
     &__text {
       font-size: 16px;
     }
-  
+
     // &__form {
-      // margin-top: 100px;
+    // margin-top: 100px;
     // }
-  
+
     &__form-row {
-    display: block;
-    margin-top: 0px;
+      display: block;
+      margin-top: 0px;
     }
-   
+
     &__form-input {
       display: block;
       width: calc(100% - 20px);
       margin-top: 15px;
     }
-  
+
     &__form-btn {
       max-width: 240px;
       height: 55px;
       margin: 40px auto 10px auto;
       font-size: 16px;
     }
-  
+
     &__custom-select {
       margin-top: 15px;
       position: relative;
     }
   }
 
-.pre-scroll__left {
-  width: 75%;
+  .pre-scroll__left {
+    width: 75%;
+  }
 }
 
-
-
+// height media
+@media (min-height: 980px) {
+  .first-sections-scroll {
+    height: 750px;
+  }
 }
