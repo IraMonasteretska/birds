@@ -729,18 +729,11 @@ margin-bottom: 90px;
   &__quadro-letters{
     margin: 0;
     position: absolute;
-    bottom: -20px;
+    bottom: -0px;
     left: 0;
     right: 0;
     z-index: 4;
-    font-family: 'Times New Roman';
-font-weight: bold;
-font-size: 110px;
-text-align: center;
-letter-spacing: 0.09em;
-text-transform: uppercase;
-color: transparent;
--webkit-text-stroke: .5px #fff;
+    width: 100%;
   }
 
   &__quadro-gradient{
