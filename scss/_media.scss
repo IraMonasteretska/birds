@@ -282,6 +282,20 @@
 }
 
 @media (max-width: 1195px) {
+
+  .two-block__left-title,
+  .video-block__title,
+  .pre-scroll__title,
+  .two-block__left-title,
+  .three-block__title,
+  .our-concept__title,
+  .contact__title,
+  .footer__title,
+  .welcome__title  {
+    font-size: 38px;
+  }
+
+
   .blog {
     &__info {
       img {
@@ -401,10 +415,6 @@
   }
 
   .pre-scroll {
-    &__title {
-      font-size: 43px;
-    }
-
     &__parts {
       width: 49%;
     }
@@ -416,9 +426,6 @@
   }
 
   .three-block {
-    &__title {
-      font-size: 43px;
-    }
 
     &__right {
       width: 65%;
@@ -443,10 +450,6 @@
   }
 
   .two-block {
-    &__left-title {
-      font-size: 43px;
-    }
-
     &__slider-current-slide {
       margin-top: 35px;
     }
@@ -595,9 +598,6 @@
 }
 
 @media (max-width: 1080px) {
-
-  
-
   .pre-scroll {
     position: relative;
     display: block;
@@ -614,9 +614,6 @@
       width: calc(100% - 60px);
     }
 
-    &__title {
-      font-size: 40px;
-    }
     &__text {
       margin-top: 40px;
       font-size: 16px;
