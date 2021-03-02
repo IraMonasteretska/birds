@@ -360,3 +360,26 @@ color: #C9AF6E;
     }
 }
 
+
+.contact-blog{
+position: relative;
+margin-top: 120px;
+&::before{
+    position: absolute;
+    content: '';
+    background: url(../img/main-page/bg-green.png);
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 450px;
+}
+&__main{
+    position: relative;
+    max-width: 1035px;
+    margin: 240px auto 0 auto;
+    background: #F5F5F7;
+border-radius: 2px;
+margin-bottom: 90px;
+}
+}
+

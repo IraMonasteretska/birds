@@ -65,8 +65,7 @@ if (document.querySelector('.contact__form-select')) {
       !target.classList.contains('contact__form-select') &&
       !target.classList.contains('contact__svg') &&
       target != selectSvg_ &&
-      target != selectSvg__ )   {
-          console.log(target);
+      target != selectSvg__) {
       optionsCont.classList.remove('active')
       selectSvg.classList.remove('active')
     }
@@ -81,9 +80,9 @@ if (document.querySelector('.contact__form-select')) {
 $('.tooltipLink').hover(function () {
   var title = $(this).attr('data-tooltip');
   $(this).data('tipText', title);
-  if(title == ''){}
-  else{
-     $('<p class="tooltip"></p>').fadeIn(200).text(title).appendTo('body');
+  if (title == '') { }
+  else {
+    $('<p class="tooltip"></p>').fadeIn(200).text(title).appendTo('body');
   }
 }, function () {
   $(this).attr('data-tooltip', $(this).data('tipText'));
@@ -92,13 +91,24 @@ $('.tooltipLink').hover(function () {
   var mousex = e.pageX;
   var mousey = e.pageY;
   $('.tooltip').css({
-      top: mousey,
-      left: mousex,
-      dispaly: 'flex'
+    top: mousey,
+    left: mousex,
+    dispaly: 'flex'
   })
 });
 // end move tooltipe
 
 
 
-
+// start more text about us
+if (document.querySelector('.two-block__about-more')) {
+  let moreBtn = document.querySelector('.two-block__about-more')
+  let textHidden = document.querySelectorAll('.two-block__about-text-hidden')
+  moreBtn.addEventListener('click', () => {
+    moreBtn.classList.add('hidden')
+    for (let i of textHidden) {
+      i.classList.remove('hidden')
+    }
+  })
+}
+// end more text about us

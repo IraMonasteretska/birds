@@ -1,3 +1,4 @@
+var controller = new ScrollMagic.Controller();
 // start slick slider - welcome block
 $(".welcome__slider-left").slick({
   slidesToShow: 3,
@@ -61,9 +62,6 @@ $(".two-block__slider").on(
 
 // start scroll animation - first
 if (document.querySelector('.first-sections-scroll')) {
-  var controller = new ScrollMagic.Controller();
-
-
   if (window.matchMedia("(min-width: 700px)").matches) {
     var horizontalSlide = new TimelineMax()
       .to(".first-sections-scroll", 1, { x: "-80%" })
@@ -100,20 +98,20 @@ if (document.querySelector('.first-sections-scroll')) {
     sections.style.width = section[0].offsetWidth * section.length + 'px'
   }
 
-//show more text
-let sectionScrollContainer = document.querySelectorAll('.section-scroll__bot-cont')
-for (let i = 0; i < sectionScrollContainer.length; i++) {
-  let button = sectionScrollContainer[i].querySelector('.section-scroll__view-more-btn')
-  let text = sectionScrollContainer[i].querySelector('.section-scroll__text.hidden')
-  let btnCont = sectionScrollContainer[i].querySelector('.section-scroll__btn-cont')
+  //show more text
+  let sectionScrollContainer = document.querySelectorAll('.section-scroll__bot-cont')
+  for (let i = 0; i < sectionScrollContainer.length; i++) {
+    let button = sectionScrollContainer[i].querySelector('.section-scroll__view-more-btn')
+    let text = sectionScrollContainer[i].querySelector('.section-scroll__text.hidden')
+    let btnCont = sectionScrollContainer[i].querySelector('.section-scroll__btn-cont')
 
-  button.addEventListener('click', () => {
-    text.classList.remove('hidden')
-    text.classList.add('visible')
-    button.classList.add('hidden')
-    btnCont.classList.add('hidden')
-  })
-}
+    button.addEventListener('click', () => {
+      text.classList.remove('hidden')
+      text.classList.add('visible')
+      button.classList.add('hidden')
+      btnCont.classList.add('hidden')
+    })
+  }
 
 }
 
@@ -122,7 +120,6 @@ for (let i = 0; i < sectionScrollContainer.length; i++) {
 
 // start scroll animation - two
 if (document.querySelector('.two-sections-scroll')) {
-  var controller = new ScrollMagic.Controller();
   if (window.matchMedia("(min-width: 700px)").matches) {
     var horizontalSlide = new TimelineMax()
       .to(".two-sections-scroll", 1, { x: "-80%" })
@@ -153,7 +150,7 @@ if (document.querySelector('.two-sections-scroll')) {
     sections.style.width = section[0].offsetWidth * section.length - 600 + 'px'
   }
   else if (window.matchMedia("(max-width: 1000px)").matches) {
-    sections.style.width = section[0].offsetWidth * section.length +  'px'
+    sections.style.width = section[0].offsetWidth * section.length + 'px'
   }
 }
 // end scroll animation - two
@@ -263,9 +260,7 @@ var scene = new ScrollMagic.Scene({
   .addTo(controller);
 
 
-
-
-  // start slick slider - blog
+// start slick slider - blog
 $(".slider-blog__slider").slick({
   slidesToShow: 1,
   speed: 1000,
@@ -274,5 +269,17 @@ $(".slider-blog__slider").slick({
   focusOnSelect: false,
   prevArrow: '<div class="slick-prev slick-arrow">Prev</div>',
 });
-
   // end slick slider - blog
+
+// start slick slider - about
+$(".about-main__slider").slick({
+  slidesToShow: 1,
+  speed: 1000,
+  infinite: true,
+  arrows: true,
+  focusOnSelect: false,
+  prevArrow: '<div class="slick-prev slick-arrow">Prev</div>',
+  nextArrow: '<div class="slick-next slick-arrow">Next</div>',
+  vertical: true,
+});
+  // end slick slider - about
