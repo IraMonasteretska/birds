@@ -258,6 +258,7 @@
 
     &__container-hiddens {
         overflow: hidden;
+        transform: translateY(4px) translateX(-4px);
     }
 
     &__item-img {
