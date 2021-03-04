@@ -181,11 +181,13 @@
 // start scroll style//
 //////////////////////
 
+// background: url(../img/main-page/bg-green.png);
+
 .about-scroll {
     &__container {
         width: 425px;
         margin-right: 70px;
-        height: 600px ;
+        height: 600px;
     }
 
     &__contact-block {
@@ -328,4 +330,29 @@
         color: rgba(49, 50, 49, 0.6);
         margin: 0 0 0 25px;
     }
+}
+
+.first-section-scroll.first-section-scroll-about {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 500px;
+    flex: 0 0 500px;
+}
+
+.first-section-scroll-about-title {
+    font-family: "Times New Roman";
+    font-weight: bold;
+    font-size: 58px;
+    line-height: 130%;
+    letter-spacing: 0.09em;
+    color: #ffffff;
+    max-width: 325px;
+}
+
+.about-croll-wrapper__bg {
+    margin-top: 180px;
+    display: flex;
+    align-items: flex-end;
+    height: 400px;
+    background: url(../img/main-page/bg-green.png);
+    margin-bottom: -300px;
 }
