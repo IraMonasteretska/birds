@@ -325,8 +325,119 @@
   .footer__title,
   .welcome__title,
   .about-main__title,
-  .client__title {
+  .client__title,
+  .contact-page__main-title,
+  .contact-page__contact-main-title {
     font-size: 38px;
+  }
+
+  .about-scroll {
+    &__container {
+      width: 340px;
+      margin-right: 40px;
+      height: 500px;
+    }
+
+    &__contact-block {
+      height: 200px;
+      padding: 10px;
+    }
+
+    &__phone {
+      font-size: 16px;
+      line-height: 130%;
+    }
+
+    &__email {
+      font-size: 16px;
+      line-height: 150%;
+    }
+
+    &__name-block {
+      padding: 10px;
+      padding: 10px 10px 0 10px;
+    }
+
+    &__name {
+      font-size: 16px;
+      line-height: 130%;
+    }
+
+    &__name-separator {
+      margin: 0 3px;
+      font-size: 16px;
+      line-height: 130%;
+    }
+
+    &__position {
+      font-size: 16px;
+      line-height: 130%;
+    }
+
+    &__skill-block {
+      padding: 0 10px 0 10px;
+      height: 200px;
+    }
+
+    &__skill-more {
+      font-size: 16px;
+      line-height: 130%;
+      margin-top: 6px;
+    }
+
+    &__skill {
+      margin-top: 6px;
+    }
+
+    &__skill-title {
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+
+  .contact-page-two {
+    margin-top: 60px;
+    &__left {
+      width: calc(35% - 30px);
+      font-size: 16px;
+      line-height: 180%;
+      padding: 60px 0;
+    }
+
+    &__right {
+      padding: 60px 30px;
+      width: calc(65% - 60px);
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+
+  .contact-page {
+    &__start {
+      margin-top: 260px;
+    }
+  }
+
+  .contact-page {
+    margin-top: 100px;
+    padding: 80px 60px 200px 60px;
+    &__df {
+      margin-top: 100px;
+    }
+
+    &__df-title {
+      width: calc(35% - 30px);
+      font-size: 16px;
+    }
+
+    &__text {
+      width: calc(50% - 30px);
+      font-size: 16px;
+      line-height: 150%;
+    }
   }
 
   .client {
@@ -694,8 +805,56 @@
   .our-concept__title,
   .contact__title,
   .footer__title,
-  .client__title {
+  .client__title,
+  .contact-page__main-title,
+  .contact-page__contact-main-title,
+  .slider-blog__right-title,
+  .slider-blog__upslider-title,
+  .about-main__title {
     font-size: 30px;
+  }
+
+  .contact-page-two {
+    padding-left: 0;
+    display: block;
+    &__left {
+      width: calc(100% - 40px);
+      font-weight: 900;
+      padding: 35px 20px;
+    }
+
+    &__right {
+      padding: 50px 20px;
+      width: calc(100% - 40px);
+    }
+
+    &__text {
+      width: calc(50% - 10px);
+    }
+  }
+
+  .contact-page {
+    &__start {
+      margin-top: 180px;
+    }
+  }
+
+  .contact-page {
+    &__df {
+      display: block;
+    }
+
+    &__df-title {
+      width: 100%;
+    }
+
+    &__texts {
+      width: 100%;
+    }
+
+    &__text {
+      width: calc(50% - 20px);
+    }
   }
 
   .client {
@@ -1002,6 +1161,102 @@
   .video-block__bot-text,
   .video-block__top-text {
     font-size: 16px;
+  }
+
+
+
+  .about-scroll {
+    &__container {
+        width: 280px;
+        margin-right: 34px;
+        height: 440px;
+    }
+
+    &__contact-block {
+        height: 170px;
+    }
+
+    &__name-block {
+        padding: 10px 10px 0 10px;
+        // display: block;
+    }
+
+    &__name {
+        font-size: 14px;
+    }
+
+    &__name-separator {
+        font-size: 14px;
+    }
+
+    &__position {
+        font-size: 14px;
+    }
+
+    &__skill-block {
+        height: 180px;
+    }
+}
+
+
+  .contact-blog__main-contact-page {
+    margin: 0px auto 60px auto;
+  }
+
+  .contact {
+    &__text-range {
+      display: block;
+    }
+
+    &__text-range-title {
+      width: 100%;
+      font-size: 16px;
+    }
+
+    &__text-range--empty {
+      display: none;
+    }
+  }
+  .contact__range {
+    outline: none;
+  }
+
+  .contact__range-price {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .contact-page-two {
+    margin-top: 20px;
+    padding: 0 !important;
+    &__right {
+      display: block;
+    }
+    &__left {
+      width: calc(100% - 30px);
+      padding: 15px;
+    }
+
+    &__text {
+      width: 100%;
+    }
+  }
+
+  .contact-page {
+    &__start {
+      display: block;
+    }
+  }
+
+  .contact-page {
+    padding: 20px 0;
+    &__texts {
+      display: block;
+    }
+
+    &__text {
+      width: 100%;
+    }
   }
 
   .client {
@@ -1315,8 +1570,6 @@
         background: #ffffff;
         width: 5px;
       }
-      // &::-webkit-scrollbar-corner { background-color: #999;}
-      // &::-webkit-resizer { background-color: #666;}
     }
 
     &__text {
@@ -1383,7 +1636,12 @@
   .contact__title,
   .footer__title,
   .about-main__title,
-  .client__title {
+  .client__title,
+  .contact-page__contact-main-title,
+  .contact-page__main-title,
+  .slider-blog__right-title,
+  .slider-blog__title,
+  .slider-blog__upslider-title {
     font-size: 24px;
   }
 
@@ -1704,6 +1962,7 @@
     }
   }
 }
+
 /////////////////////
 /// height media////
 ///////////////////
