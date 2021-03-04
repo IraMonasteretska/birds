@@ -114,8 +114,6 @@ if (document.querySelector('.first-sections-scroll')) {
   }
 
 }
-
-
 // end scroll animation - first
 
 // start scroll animation - two
@@ -152,6 +150,15 @@ if (document.querySelector('.two-sections-scroll')) {
   else if (window.matchMedia("(max-width: 1000px)").matches) {
     sections.style.width = section[0].offsetWidth * section.length + 'px'
   }
+
+if(document.querySelector('.about-croll-wrapper')){
+  if (window.matchMedia("(min-width: 1000px)").matches) {
+    sections.style.width = section[0].offsetWidth * section.length - 100 + 'px'
+  }
+   else if (window.matchMedia("(max-width: 400px)").matches) {
+    sections.style.width = section[0].offsetWidth * section.length + 100 + 'px'
+  }
+}
 }
 // end scroll animation - two
 

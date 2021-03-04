@@ -89,6 +89,27 @@
 }
 
 @media (max-width: 1370px) {
+  .single {
+    &__head {
+      margin-top: 80px;
+    }
+
+    &__head-title {
+      font-size: 42px;
+    }
+
+    &__head-df {
+      margin-top: 30px;
+    }
+
+    &__head-thumb-cont {
+      margin-top: 50px;
+      img {
+        height: 480px;
+      }
+    }
+  }
+
   .two-block__about-text {
     font-size: 16px;
     line-height: 150%;
@@ -328,8 +349,21 @@
   .client__title,
   .contact-page__main-title,
   .contact-page__contact-main-title,
-  .first-section-scroll-about-title {
+  .first-section-scroll-about-title,
+  .single__head-title {
     font-size: 38px;
+  }
+
+  .single {
+    &__head-share-text {
+      font-size: 16px;
+    }
+
+    &__head-thumb-cont {
+      img {
+        height: 370px;
+      }
+    }
   }
 
   .first-section-scroll.first-section-scroll-about {
@@ -827,8 +861,29 @@
   .slider-blog__right-title,
   .slider-blog__upslider-title,
   .about-main__title,
-  .first-section-scroll-about-title {
+  .first-section-scroll-about-title,
+  .single__head-title {
     font-size: 30px;
+  }
+
+  .single {
+    &__breadcrumbs {
+      margin-top: 170px;
+    }
+
+    &__bread-home {
+      font-size: 16px;
+    }
+
+    &__bread-separator {
+      margin-left: 9px;
+      margin-right: 9px;
+    }
+
+    &__bread-this {
+      font-size: 16px;
+      width: 100px;
+    }
   }
 
   .contact-page-two {
@@ -1169,6 +1224,31 @@
 }
 
 @media (max-width: 767px) {
+  .single {
+    &__head {
+      margin-top: 40px;
+    }
+
+    &__head-df {
+      display: block;
+    }
+
+    &__head-share {
+      margin-top: 20px;
+    }
+
+    &__head-share-icon {
+      margin-left: 15px;
+    }
+
+    &__head-thumb-cont {
+      margin-top: 30px;
+      img {
+        height: 250px;
+      }
+    }
+  }
+
   .standart-button-link,
   .our-concept__btns-right,
   .welcome__right-btn {
@@ -1659,7 +1739,8 @@
   .contact-page__main-title,
   .slider-blog__right-title,
   .slider-blog__title,
-  .slider-blog__upslider-title {
+  .slider-blog__upslider-title,
+  .single__head-title {
     font-size: 24px;
   }
 
@@ -1765,6 +1846,10 @@
 }
 
 @media (max-width: 500px) {
+  .single__head-thumb-cont img {
+    height: 200px;
+  }
+
   .client {
     &__item-img {
       max-width: 110px;
@@ -1966,6 +2051,10 @@
 }
 
 @media (max-width: 400px) {
+  .single__head-thumb-cont img {
+    height: 160px;
+  }
+
   .about-main {
     &__item-img {
       height: 80px;
@@ -1993,6 +2082,19 @@
   }
   .two-sections-scroll-about {
     height: 980px;
+  }
+  @media (max-width: 1195px) {
+    .two-sections-scroll-about {
+      height: 780px;
+    }
+  }
+}
+
+@media (min-height: 750px) {
+  @media (max-width: 767px) {
+    .two-sections-scroll-about {
+      height: 680px;
+    }
   }
 }
 /////////////////////
