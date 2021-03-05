@@ -3,9 +3,9 @@
     display: flex;
     justify-content: space-between;
     max-width: 1550px;
+    align-items: center;
     position: relative;
     &__title {
-        margin-top: 150px;
         width: calc(35% - 40px);
         font-family: "Times New Roman";
         font-weight: bold;
@@ -355,7 +355,7 @@
     margin-right: 60px;
     margin-top: 180px;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     height: 400px;
     background: url(../img/main-page/bg-green.png);
     margin-bottom: -300px;
