@@ -33,31 +33,33 @@ $(".welcome__slider-left, .welcome__slider-right").on("mouseout", function () {
 // end slick slider - welcome block
 
 // start slick slider - two-block
-$(".two-block__slider").slick({
-  slidesToShow: 1,
-  speed: 1000,
-  infinite: true,
-  arrows: true,
-  focusOnSelect: false,
-  prevArrow: '<div class="slick-prev slick-arrow">Prev</div>',
-});
+if (document.querySelector('.services-slider__slider')) {
+  $(".two-block__slider").slick({
+    slidesToShow: 1,
+    speed: 1000,
+    infinite: true,
+    arrows: true,
+    focusOnSelect: false,
+    prevArrow: '<div class="slick-prev slick-arrow">Prev</div>',
+  });
 
-let currentSlide;
-const updateSliderCounter = function (slick, currentIndex) {
-  currentSlide = slick.slickCurrentSlide() + 1;
-  $(".two-block__slider-current-slide").text("0" + currentSlide + '.');
-};
+  let currentSlide;
+  const updateSliderCounter = function (slick, currentIndex) {
+    currentSlide = slick.slickCurrentSlide() + 1;
+    $(".two-block__slider-current-slide").text("0" + currentSlide + '.');
+  };
 
-$(".two-block__slider").on("init", function (event, slick) {
-  updateSliderCounter(slick);
-});
+  $(".two-block__slider").on("init", function (event, slick) {
+    updateSliderCounter(slick);
+  });
 
-$(".two-block__slider").on(
-  "afterChange",
-  function (event, slick, currentSlide) {
-    updateSliderCounter(slick, currentSlide);
-  }
-);
+  $(".two-block__slider").on(
+    "afterChange",
+    function (event, slick, currentSlide) {
+      updateSliderCounter(slick, currentSlide);
+    }
+  );
+}
 //end slick slider - two-block
 
 // start scroll animation - first
@@ -151,14 +153,14 @@ if (document.querySelector('.two-sections-scroll')) {
     sections.style.width = section[0].offsetWidth * section.length + 'px'
   }
 
-if(document.querySelector('.about-croll-wrapper')){
-  if (window.matchMedia("(min-width: 1000px)").matches) {
-    sections.style.width = section[0].offsetWidth * section.length - 100 + 'px'
+  if (document.querySelector('.about-croll-wrapper')) {
+    if (window.matchMedia("(min-width: 1000px)").matches) {
+      sections.style.width = section[0].offsetWidth * section.length - 100 + 'px'
+    }
+    else if (window.matchMedia("(max-width: 400px)").matches) {
+      sections.style.width = section[0].offsetWidth * section.length + 100 + 'px'
+    }
   }
-   else if (window.matchMedia("(max-width: 400px)").matches) {
-    sections.style.width = section[0].offsetWidth * section.length + 100 + 'px'
-  }
-}
 }
 // end scroll animation - two
 
@@ -276,7 +278,7 @@ $(".slider-blog__slider").slick({
   focusOnSelect: false,
   prevArrow: '<div class="slick-prev slick-arrow">Prev</div>',
 });
-  // end slick slider - blog
+// end slick slider - blog
 
 // start slick slider - about
 $(".about-main__slider").slick({
@@ -288,5 +290,39 @@ $(".about-main__slider").slick({
   prevArrow: '<div class="slick-prev slick-arrow">Prev</div>',
   nextArrow: '<div class="slick-next slick-arrow">Next</div>',
   vertical: true,
+  autoplay: true
 });
-  // end slick slider - about
+// end slick slider - about
+
+
+
+if (document.querySelector('.services-slider__slider')) {
+  // start slick slider - services
+  $(".services-slider__slider").slick({
+    slidesToShow: 1,
+    speed: 1000,
+    infinite: true,
+    arrows: true,
+    focusOnSelect: false,
+    prevArrow: '<div class="slick-prev slick-arrow">Prev</div>',
+    nextArrow: '<div class="slick-next slick-arrow">Next</div>',
+  });
+
+  let currentSlide;
+  const updateSliderCounter = function (slick, currentIndex) {
+    currentSlide = slick.slickCurrentSlide() + 1;
+    $(".services-slider__conter").text("0" + currentSlide + '.');
+  };
+
+  $(".services-slider__slider").on("init", function (event, slick) {
+    updateSliderCounter(slick);
+  });
+
+  $(".services-slider__slider").on(
+    "afterChange",
+    function (event, slick, currentSlide) {
+      updateSliderCounter(slick, currentSlide);
+    }
+  );
+}
+//end slick slider - services
