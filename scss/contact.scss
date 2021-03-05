@@ -54,6 +54,8 @@
     margin-top: 100px;
     background: url(../img/main-page/bg-green.png);
     padding: 130px 100px 240px 100px;
+    margin-left: 60px;
+    margin-right: 60px;
 
     &__contact-main-title {
         max-width: 1086px;
@@ -98,6 +100,10 @@
     margin: -120px auto 120px auto;
 }
 
+.contact-form__container{
+padding-left: 30px;
+padding-right: 30px;
+}
 // range
 
 .contact__range-container {
@@ -163,6 +169,11 @@ input[type="range"]::-webkit-slider-thumb {
     border-radius: 100%;
     -webkit-appearance: none;
     cursor: pointer;
+    transition: all .3s;
+    &:hover{
+background: #C9AF6E;
+border: 1px solid #C9AF6E;
+    }
 }
 
 input[type="range"]::-moz-range-thumb {

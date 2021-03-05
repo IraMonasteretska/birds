@@ -67,16 +67,27 @@
         justify-content: space-between;
         height: 500px !important;
         outline: none;
+        &:hover .slider-blog__item-img{
+            transform: scale(1.0) ;
+        }
+
+        &:hover .slider-blog__item-title{
+            color: #C9AF6E;
+        }
     }
 
     &__item-img-cont {
+        transition: all .5s;
         width: calc(45% - 20px);
+        overflow: hidden;
     }
 
     &__item-img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        transform: scale(1.1);
+        transition: all .5s;
     }
 
     &__item-texts {
@@ -93,6 +104,7 @@
         line-height: 150%;
         margin: 0;
         color: #313231;
+        transition: all .5s;
     }
 
     &__item-text {
@@ -375,7 +387,7 @@ margin-top: 120px;
 }
 &__main{
     position: relative;
-    max-width: 1035px;
+    max-width: 850px;
     margin: 240px auto 0 auto;
     background: #F5F5F7;
 border-radius: 2px;
