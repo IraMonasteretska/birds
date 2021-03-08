@@ -7,7 +7,6 @@
         color: #c9af6e;
     }
     &__title {
-        
         max-width: 900px;
         margin: 0;
         font-family: "Times New Roman";
@@ -35,7 +34,7 @@
     }
 
     &__item {
-outline: none;
+        outline: none;
     }
 
     &__item-img {
@@ -43,33 +42,176 @@ outline: none;
         height: 560px;
         object-fit: cover;
     }
-    &__slider{
+    &__slider {
         position: relative;
-        &:before{
-position: absolute;
-content: '';
-top: -40px;
-        width:calc(29% - 40px);
-        height: 1px;
-        left: 65px;
-        background: #313231;
+        &:before {
+            position: absolute;
+            content: "";
+            top: -38px;
+            width: calc(29% - 40px);
+            height: 1px;
+            left: 65px;
+            background: #313231;
         }
     }
-.slick-next{
-    left: 33%;
-} 
-.slick-arrow{
-position: absolute;
-top: -50px;
-font-weight: bold;
-font-size: 18px;
-line-height: 140%;
-letter-spacing: 0.09em;
-color: rgba(93, 93, 93, 0.6);
-transition: all .3s;
-&:hover{
-    color: #C9AF6E;
-}
+    .slick-next {
+        left: 33%;
+    }
+    .slick-arrow {
+        position: absolute;
+        top: -50px;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 140%;
+        letter-spacing: 0.09em;
+        color: rgba(93, 93, 93, 0.6);
+        transition: all 0.3s;
+        cursor: pointer;
+        &:hover {
+            color: #c9af6e;
+        }
+    }
 }
 
+.contact-page-two_services {
+    margin-top: 180px;
+}
+.section-scroll-two__service-img {
+    width: 100%;
+    object-fit: cover;
+    padding: 0;
+    height: 560px;
+}
+
+.section-scroll-two__service.section-scroll-two__container {
+    width: 560px;
+    height: 560px;
+    min-height: auto;
+    padding: 0px;
+}
+
+.test {
+    position: relative;
+    z-index: 1000;
+}
+
+.sup-scroll__text {
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 200%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    position: relative;
+    z-index: 0;
+    max-width: 1050px;
+    padding-bottom: 400px;
+    margin-bottom: -300px;
+}
+
+.anim-services {
+    margin-top: 200px;
+    background: url(../img/main-page/bg-green.png);
+    margin-left: 60px;
+    margin-right: 60px;
+    padding-bottom: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    &__left {
+        width: 35%;
+    }
+
+    &__text--bold {
+        margin-top: 50px;
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 200%;
+        text-align: center;
+        text-transform: uppercase;
+        color: #ffffff;
+    }
+}
+
+.benefits {
+    margin-top: 150px;
+    &__img-cont {
+        position: relative;
+        width: 127px;
+        height: 127px;
+        &:hover .benefits__img-hover {
+            transform: rotate(90deg);
+        }
+    }
+
+    &__img-main {
+        position: absolute;
+        cursor: pointer;
+    }
+    &__center-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        z-index: 5;
+        cursor: pointer;
+    }
+
+    &__img-hover {
+        cursor: pointer;
+        position: absolute;
+        z-index: 3;
+        transition: all 1s;
+    }
+
+    &__title {
+        font-family: "Times New Roman";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 58px;
+        line-height: 130%;
+        letter-spacing: 0.09em;
+        color: #313231;
+        max-width: 736px;
+    }
+
+    &__titlte--color {
+        color: #c9af6e;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        width: 390px;
+        margin-top: 70px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    &__item-link {
+        max-width: none;
+    }
+
+    &__text {
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 140%;
+        text-transform: uppercase;
+        color: #313231;
+        margin: 14px 0 0 0;
+    }
+
+    &__item--small-text {
+        margin: 14px 0 0 0;
+        font-size: 18px;
+        line-height: 160%;
+        color: #313231;
+    }
 }

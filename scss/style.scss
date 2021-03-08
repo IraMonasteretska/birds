@@ -453,7 +453,7 @@ margin-bottom: 90px;
   &__bg {
     position: absolute;
     z-index: 0;
-    top: 80px;
+    top: 40px;
     right: 0;
     bottom: -600px;
     //  height: 1000px;
@@ -502,7 +502,6 @@ margin-bottom: 90px;
     font-size: 58px;
     line-height: 130%;
     letter-spacing: 0.09em;
-    text-transform: uppercase;
     color: #ffffff;
     margin: 0;
   }
@@ -516,7 +515,7 @@ margin-bottom: 90px;
   }
 
   &__text {
-    margin-top: 100px;
+    margin-top: 60px;
     font-size: 18px;
     line-height: 160%;
     color: #ffffff;
