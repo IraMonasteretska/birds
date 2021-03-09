@@ -138,6 +138,7 @@ if (document.querySelector('.about-scroll__skill-block')) {
   const skillBlock = document.querySelectorAll('.about-scroll__skill-block')
   for (let containerItem of skillBlock) {
     let skillItem = containerItem.querySelectorAll('.about-scroll__skill')
+
     for (let item of skillItem) {
       item.classList.add('hidden')
     }
@@ -147,6 +148,11 @@ if (document.querySelector('.about-scroll__skill-block')) {
 
     // view more items on click
     let btnViewMore = containerItem.querySelector('.about-scroll__skill-more')
+
+    if(skillItem.length < 5){
+      btnViewMore.classList.add('hidden')
+    }
+
     btnViewMore.addEventListener('click', () => {
       btnViewMore.classList.add('hidden')
       let skillItem = containerItem.querySelectorAll('.about-scroll__skill')

@@ -931,8 +931,11 @@ margin-bottom: 90px;
   &__form-select {
     width: calc(100% - 20px);
     cursor: pointer;
+    &::placeholder {
+      color: #313231;
+    }
     &:focus::placeholder {
-      color: rgba(49, 50, 49, 0.6);
+      color: #313231;
     }
   }
 
