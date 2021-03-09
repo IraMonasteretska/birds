@@ -33,7 +33,7 @@ $(".welcome__slider-left, .welcome__slider-right").on("mouseout", function () {
 // end slick slider - welcome block
 
 // start slick slider - two-block
-if (document.querySelector('.services-slider__slider')) {
+if (document.querySelector('.two-block__slider')) {
   $(".two-block__slider").slick({
     slidesToShow: 1,
     speed: 1000,
@@ -195,10 +195,6 @@ var scene = new ScrollMagic.Scene({
   .setTween('.horizontal-block__animation-blok-left', .4, { height: '100%' }, { duration: 50 })
   .addTo(controller);
 
-
-
-
-
 // pre-scroll block animation
 var scene = new ScrollMagic.Scene({
   triggerElement: '.pre-scroll__left-first',
@@ -295,7 +291,7 @@ $(".about-main__slider").slick({
 // end slick slider - about
 
 
-
+//start slick slider - services
 if (document.querySelector('.services-slider__slider')) {
   // start slick slider - services
   $(".services-slider__slider").slick({
