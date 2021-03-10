@@ -1061,17 +1061,20 @@ margin: 5px;
 .pre-scroll-test{
   margin-top: 0 !important;
   margin-bottom: 0 !important;
+  .pre-scroll__bg {
+top: 0 !important;
+  }
 }
 
 
-.first-sections-scroll {
-      height: 980px;
-    }
-    .two-sections-scroll {
-      height: 650px;
-    }
-    .two-sections-scroll-about {
-      height: 980px;
-    }
+// .first-sections-scroll {
+//       height: 980px;
+//     }
+//     .two-sections-scroll {
+//       height: 650px;
+//     }
+//     .two-sections-scroll-about {
+//       height: 980px;
+//     }
 
 @import "media";
