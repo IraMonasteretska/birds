@@ -76,29 +76,45 @@ if (document.querySelector('.first-sections-scroll')) {
     var horizontalSlide = new TimelineMax()
       .to(".first-sections-scroll", 1, { x: "-100%" })
   }
-  new ScrollMagic.Scene({
-    triggerElement: ".first-wrapper-scroll",
-    triggerHook: "onLeave",
-    duration: "400%"
-  })
-    .setPin(".first-wrapper-scroll")
-    .setTween(horizontalSlide)
-    .addTo(controller);
+
+    if (window.matchMedia("(min-height: 1300px)").matches) {
+      new ScrollMagic.Scene({
+        triggerElement: ".first-wrapper-scroll",
+        triggerHook: "onLeave",
+        duration: "200%"
+      })
+        // .setPin(".first-wrapper-scroll")
+        .setTween(horizontalSlide)
+        .addTo(controller);
+    }
+  else if (window.matchMedia("(max-height: 1300px)").matches) {
+    new ScrollMagic.Scene({
+      triggerElement: ".first-wrapper-scroll",
+      triggerHook: "onLeave",
+      duration: "200%"
+    })
+      .setPin(".first-wrapper-scroll")
+      .setTween(horizontalSlide)
+      .addTo(controller);
+  }
+
+
+
 
   let sections = document.querySelector('.first-sections-scroll')
   let section = document.querySelectorAll('.section-scroll')
 
 
-  sections.style.width = section[0].offsetWidth * section.length + 'px'
+  // sections.style.width = section[0].offsetWidth * section.length  + 'px'
   // if (window.matchMedia("(min-width: 700px)").matches) {
   //   sections.style.width = section[0].offsetWidth * section.length + 400 + 'px'
   // }
-  // else if (window.matchMedia("(max-width: 350px)").matches) {
-  //   sections.style.width = section[0].offsetWidth * section.length + 100 + 'px'
-  // }
-  // else if (window.matchMedia("(max-width: 700px)").matches) {
-  //   sections.style.width = section[0].offsetWidth * section.length + 'px'
-  // }
+   if (window.matchMedia("(max-width: 350px)").matches) {
+    sections.style.width = section[0].offsetWidth * section.length + 100 + 'px'
+  }
+  else if (window.matchMedia("(max-width: 700px)").matches) {
+    sections.style.width = section[0].offsetWidth * section.length + 'px'
+  }
 
   //show more text
   let sectionScrollContainer = document.querySelectorAll('.section-scroll__bot-cont')

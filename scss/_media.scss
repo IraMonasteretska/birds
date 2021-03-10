@@ -382,6 +382,10 @@
     font-size: 38px;
   }
 
+  .video-block__left{
+    margin-top: 50px;
+  }
+
 
   .sup-scroll__text{
 font-size: 16px;
@@ -2333,15 +2337,40 @@ margin-top: 180px;
 /////////////////////
 /// height media////
 ///////////////////
-@media (min-height: 980px) {
-  .about-croll-wrapper__bg {
-margin-bottom: -45vh;
-  }
+@media (min-height: 1280px) {
+//   .about-croll-wrapper__bg {
+// margin-bottom: -45vh;
+//   }
 
-  .client {
+//   .client {
 
-margin-top: -20vh;
+// margin-top: -20vh;
+//   }
+.pre-scroll-smoll{
+  display: none !important;
+}
+.pre-scroll-bif-wrapper{
+  margin-top: 40px !important;
+  margin-bottom: 0 !important;
+}
+.first-sections-scroll{
+  height: 900px !important;
+}
+}
+@media (max-height: 1280px) {
+.pre-scroll-big{
+  display: none;
+}
+
+.pre-scroll-bif-wrapper{
+  margin-top: 0;
+  top: 0;
+  margin-bottom: 0;
+  .pre-scroll__bg {
+top: 0;
   }
+}
+
 }
 
 
