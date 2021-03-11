@@ -2334,81 +2334,65 @@ margin-top: 180px;
   }
 }
 
+
 /////////////////////
 /// height media////
 ///////////////////
 @media (min-height: 1280px) {
-//   .about-croll-wrapper__bg {
-// margin-bottom: -45vh;
-//   }
+  .pre-scroll-smoll{
+    display: none !important;
+  }
+  .pre-scroll-bif-wrapper{
+    margin-top: 40px !important;
+    margin-bottom: 0 !important;
+  }
+  .first-sections-scroll{
+    height: 900px !important;
+  }
+  }
 
-//   .client {
 
-// margin-top: -20vh;
-//   }
-.pre-scroll-smoll{
-  display: none !important;
-}
-.pre-scroll-bif-wrapper{
-  margin-top: 40px !important;
-  margin-bottom: 0 !important;
-}
-.first-sections-scroll{
-  height: 900px !important;
-}
-}
+
 @media (max-height: 1280px) {
-.pre-scroll-big{
-  display: none;
-}
-
-.pre-scroll-bif-wrapper{
-  margin-top: 0;
+  .pre-scroll-big{
+    display: none;
+  }
+  
+  .pre-scroll-bif-wrapper{
+    margin-top: 0;
+    top: 0;
+    margin-bottom: 0;
+    .pre-scroll__bg {
   top: 0;
-  margin-bottom: 0;
-  .pre-scroll__bg {
-top: 0;
+    }
+  }
+  
+  }
+
+@media (min-height: 980px) {
+  .first-sections-scroll {
+    height: 980px;
+  }
+  .two-sections-scroll {
+    height: 650px;
+  }
+  .two-sections-scroll-about {
+    height: 980px;
+  }
+  @media (max-width: 1195px) {
+    .two-sections-scroll-about {
+      height: 780px;
+    }
   }
 }
 
+@media (min-height: 750px) {
+  @media (max-width: 767px) {
+    .two-sections-scroll-about {
+      height: 680px;
+    }
+  }
 }
-
-
-/////////////////////
-/// height media////
-///////////////////
-
-
-
-////////////////////
-//--COPY--//////////
-/////////////////////
-/// height media////
-///////////////////
-// @media (min-height: 980px) {
-//   .first-sections-scroll {
-//     height: 980px;
-//   }
-//   .two-sections-scroll {
-//     height: 650px;
-//   }
-//   .two-sections-scroll-about {
-//     height: 980px;
-//   }
-//   @media (max-width: 1195px) {
-//     .two-sections-scroll-about {
-//       height: 780px;
-//     }
-//   }
-// }
-
-// @media (min-height: 750px) {
-//   @media (max-width: 767px) {
-//     .two-sections-scroll-about {
-//       height: 680px;
-//     }
-//   }
-// }
 /////////////////////
 /// height media////
 ///////////////////
