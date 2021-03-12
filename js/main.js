@@ -19,16 +19,16 @@ for (let i of headerMenuItem) {
 // end burger menu
 
 // start view more text in main page
-if (document.querySelector('.three-block__text')) {
-  let viewMoreBtn = document.querySelector('.three-block__view-more')
-  let viewMoreText = document.querySelector('.three-block__text.hidden')
-  viewMoreBtn.addEventListener('click', () => {
-    viewMoreBtn.classList.add('hidden')
-    viewMoreText.classList.remove('hidden')
-    viewMoreText.classList.add('visible')
+// if (document.querySelector('.three-block__text')) {
+//   let viewMoreBtn = document.querySelector('.three-block__view-more')
+//   let viewMoreText = document.querySelector('.three-block__text.hidden')
+//   viewMoreBtn.addEventListener('click', () => {
+//     viewMoreBtn.classList.add('hidden')
+//     viewMoreText.classList.remove('hidden')
+//     viewMoreText.classList.add('visible')
 
-  })
-}
+//   })
+// }
 // end more text in main page
 
 // start custom slect 
@@ -167,3 +167,7 @@ if (document.querySelector('.about-scroll__skill-block')) {
 
 }
 // end view more items in about page
+
+
+
+

@@ -76,20 +76,20 @@ if (document.querySelector('.first-sections-scroll')) {
     var horizontalSlide = new TimelineMax()
       .to(".first-sections-scroll", 1, { x: "-40%" })
   }
- 
-    new ScrollMagic.Scene({
-      triggerElement: ".first-wrapper-scroll",
-      triggerHook: "onLeave",
-      duration: "100%"
-      
-    })
-      .setPin(".first-wrapper-scroll")
-      .setTween(horizontalSlide)
-      .addTo(controller);
-      
+
+  new ScrollMagic.Scene({
+    triggerElement: ".first-wrapper-scroll",
+    triggerHook: "onLeave",
+    duration: "100%"
+
+  })
+    .setPin(".first-wrapper-scroll")
+    .setTween(horizontalSlide)
+    .addTo(controller);
+
   let sections = document.querySelector('.first-sections-scroll')
   let section = document.querySelectorAll('.section-scroll')
-  sections.style.width = section[0].offsetWidth * section.length  + 'px'
+  sections.style.width = section[0].offsetWidth * section.length + 'px'
 
   //show more text
   let sectionScrollContainer = document.querySelectorAll('.section-scroll__bot-cont')
@@ -313,3 +313,85 @@ if (document.querySelector('.services-slider__slider')) {
   );
 }
 //end slick slider - services
+// .setClassToggle(".anim-services__anim-container", "active") // add class toggle
+
+
+
+const getEnterText = () => {
+  // function setupTypewriter(t) {
+  //   var HTML = t.innerHTML;
+
+  //   t.innerHTML = "";
+
+  //   var cursorPosition = 0,
+  //     tag = "",
+  //     writingTag = false,
+  //     tagOpen = false,
+  //     typeSpeed = 100,
+  //     tempTypeSpeed = 0;
+  //   HTML[cursorPosition] = 'Y'
+  //   var type = function () {
+     
+   
+    
+  //     if (!writingTag && !tagOpen) {
+  //       if (HTML[cursorPosition] === " ") {
+  //         tempTypeSpeed = 0;
+  //       }
+  //       else {
+  //         tempTypeSpeed = (Math.random() * typeSpeed) + 50;
+  //       }
+  //       t.innerHTML += HTML[cursorPosition];
+  //     }
+  //     if (writingTag === true && HTML[cursorPosition] === ">") {
+  //       tempTypeSpeed = (Math.random() * typeSpeed) + 50;
+  //       writingTag = false;
+  //       if (tagOpen) {
+  //         var newSpan = document.createElement("span");
+  //         t.appendChild(newSpan);
+  //         newSpan.innerHTML = tag;
+  //         tag = newSpan.firstChild;
+  //       }
+  //     }
+
+  //     cursorPosition += 1;
+  //     if (cursorPosition < HTML.length - 1) {
+  //       setTimeout(type, tempTypeSpeed);
+  //     }
+
+
+  //     if (cursorPosition == HTML.length - 1) {
+  //       console.log('done');
+  //     }
+  //     console.log(cursorPosition);
+  //   };
+  //   return {
+  //     type: type
+  //   };
+  // }
+
+  // var typer = document.getElementById('typewriter');
+  // typewriter = setupTypewriter(typewriter);
+  // typewriter.type();
+}
+
+
+const getResetText = () => {
+
+}
+// start services animation 
+
+new ScrollMagic.Scene({ triggerElement: ".anim-services__anim-container" })
+  .addTo(controller)
+  .on("enter", () => {
+    getEnterText()
+  })
+  .on("leave", () => {
+    getResetText()
+    console.log('leave');
+  })
+
+
+
+
+// end services animation 

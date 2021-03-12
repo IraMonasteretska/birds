@@ -8,6 +8,7 @@
   <title>Document</title>
   <link rel="stylesheet" href="css/style.min.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 
@@ -99,7 +100,8 @@
   </section>
   <p class="sup-scroll__text container"> Depending on your needs, we can add different functions and elements to your
     website. Every company is different, and thereby, a website should also not be a one-size-fits-all solution. We want
-    to get to know your story and help you build a website that brings it to life and tells it to your customers. </p>
+    to get to know your story and help you build a website that brings it to life and tells it to your customers.
+  </p>
 
   <div class="two-wrapper-scroll">
     <div class="two-sections-scroll" id="js-slideContainer">
@@ -147,7 +149,29 @@
 
   <div class="anim-services container">
     <div class="anim-services__left">
-      <img src="img/phone.png" class="anim-services__left-bg" alt="">
+      <div class="anim-services__anim-container">
+        <img src="img/phone.svg" class="anim-services__left-bg" alt="">
+        <div class="anim-services__top">
+          <p class="anim-services__top-text" id="typewriter">Your Business Here </p>
+          <span class="anim-services__top-icon"><img src="img/anim-icon-top.png" class="anim-services__top-icon-img"
+              alt="icon"></span>
+        </div>
+        <div class="anim-services__bot">
+          <div class="anim-services__bot-url-cont">
+          <span class="anim-services__bot-define">Ad</span>
+          <span class="anim-services__bot-dot">
+            <svg width="2" height="2" viewBox="0 0 2 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="1" cy="1" r="1" fill="#46494B" />
+            </svg>
+          </span>
+          <span class="anim-services__bot-url">your-business.com</span>
+        </div>
+        <h3 class="anim-services__bot-title" >Your Business Here</h3>
+        <p class="anim-services__bot-text">Get in front of customers when they’re searching for businesses like yours on Google Search and Maps.</p>
+        </div>
+        <img src="img/bottom-anim.svg" alt="img" class="anim-services__bottom-cvg">
+      </div>
+
     </div>
     <div class="pre-scroll__right">
       <h3 class="pre-scroll__title pre-scroll__parts ">
@@ -174,8 +198,6 @@
     </div>
   </div>
 
-
-
   <div class="benefits container">
     <h3 class="benefits__title">
       <span class="benefits__titlte--color inherit-block">Key Benefits</span>
@@ -185,8 +207,9 @@
       <div class="benefits__item">
         <div class="benefits__img-cont">
           <div class="benefits__img-con">
-          <img class="benefits__img-main" src="img/ellipse-part.svg" alt="">
-          <img class="benefits__img-hover" src="img/ellipse-part.svg" alt=""></div>
+            <img class="benefits__img-main" src="img/ellipse-part.svg" alt="">
+            <img class="benefits__img-hover" src="img/ellipse-part.svg" alt="">
+          </div>
           <div class="benefits__center-img">
             <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0)">
@@ -232,8 +255,8 @@
             </svg>
           </div>
         </div>
-          <p class="benefits__text">Increase your online sales</p>
-      
+        <p class="benefits__text">Increase your online sales</p>
+
       </div>
       <div class="benefits__item">
         <div class="benefits__img-cont">
@@ -284,8 +307,8 @@
             </svg>
           </div>
         </div>
-          <p class="benefits__text">Increase your online sales</p>
-      
+        <p class="benefits__text">Increase your online sales</p>
+
       </div>
       <div class="benefits__item">
         <div class="benefits__img-cont">
@@ -336,8 +359,8 @@
             </svg>
           </div>
         </div>
-          <p class="benefits__text">Increase your online sales</p>
-      
+        <p class="benefits__text">Increase your online sales</p>
+
       </div>
       <div class="benefits__item">
         <div class="benefits__img-cont">
@@ -388,8 +411,8 @@
             </svg>
           </div>
         </div>
-          <p class="benefits__text">Increase your online sales</p>
-      
+        <p class="benefits__text">Increase your online sales</p>
+
       </div>
       <div class="benefits__item">
         <p class="benefits__item--small-text">... and many others. Need more details?</p>
@@ -400,8 +423,70 @@
     </div>
   </div>
 
+  <div class="service-partner container">
+    <div class="service-partner__bg">
+    </div>
+    <p class="service-partner__text">One of the best things about the solution is that you will regularly receive
+      detailed reports on your campaigns and their performance to know exactly where you stand and help you keep track
+      of the spending and the return – stay always on top of your investment.
+    </p>
+    <div class="service-partner__container">
+      <div class="service-partner__left"><img src="img/service-partner.png" alt=""></div>
+      <div class="service-partner__right">
+        <div class="service-partner__right-item our-concept__quadro-first image__animation-container">
+          <img src="img/fslider-img.png" class="our-concept__quadro-img image__animation" alt="image">
+          <div class="image__animation-block image__animation-block-quadro-first"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <!-- <footer class="footer container">
+  <div class="service-contact container">
+    <h3 class="service-contact__title">
+      Are you ready to
+      <span class="service-contact__title--color inherit-block">
+        give it a go?
+      </span>
+    </h3>
+
+    <div class="service-contact__contact contact">
+      <h3 class="contact__title">Contact us <span class="contact__title--color inherit-block"> to book a free assessment
+        </span> of your website with us</h3>
+      <p class="contact__text">The assessment will give you insights into your website’s current situation, the
+        visitors, and the traffic</p>
+      <form class="contact__form">
+        <div class="contact__form-row">
+          <input type="text" placeholder="* Your name" class="contact__form-input">
+          <input type="text" placeholder="* Company" class="contact__form-input">
+        </div>
+
+
+        <div class="contact__custom-select">
+          <div class="contact__svg">
+            <svg width="17" height="5" viewBox="0 0 17 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8.5 5L16.7272 0.5H0.272758L8.5 5Z" fill="#313231" />
+            </svg>
+          </div>
+          <input type="text" placeholder="Work title" class="contact__form-input contact__form-select" readonly>
+          <ul class="contact__select-options">
+            <li class="contact__select-option">options one and more</li>
+            <li class="contact__select-option">options two and more</li>
+            <li class="contact__select-option">options three and more</li>
+            <li class="contact__select-option">options four and more</li>
+          </ul>
+        </div>
+        <div class="contact__form-row">
+          <input type="text" placeholder="* Email" class="contact__form-input">
+          <input type="text" placeholder="Company website" class="contact__form-input">
+        </div>
+        <input type="submit" class="contact__form-btn standart-button-link" value="Book a call">
+
+      </form>
+
+    </div>
+  </div>
+
+  <footer class="footer container">
     <div class="footer__texts">
       <h3 class="footer__title">Our contacts</h3>
       <p class="footer__year">All Rights Reserved © Birds View 2021</p>
@@ -421,17 +506,27 @@
         <div class="image__animation-block image__animation-block-footer"></div>
       </div>
     </div>
-  </footer> -->
+  </footer>
 
+
+  <!-- <pre >
+    Depending on your needs, we can add different functions and elements to your
+    website. Every company is different, and thereby, a website should also not be a one-size-fits-all solution. We want
+    to get to know your story and help you build a website that brings it to life and tells it to your customers.
+ 
+  </pre> -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/ScrollMagic.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/plugins/animation.gsap.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/main.js"></script>
   <script src="js/plugins-config.js"></script>
-
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
