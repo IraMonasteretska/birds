@@ -1,5 +1,10 @@
 @media (max-width: 1610px) {
 
+  .anim-services__left{
+    width: calc(35% - 100px);
+    }
+    
+
   .service-contact__title {
     font-size: 45px;
       }
@@ -369,6 +374,35 @@
       font-size: 15px;
     }
   }
+}
+
+@media (max-width: 1330px){
+//////////////////
+.anim-services {
+  margin-top: 200px;
+  display: block;
+  &__left {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    transform: translateX(-40px) translateY(-60px); 
+  }
+  .pre-scroll__right {
+    width: auto;
+margin-top: -40px;
+  }
+
+  .anim-services__anim-container{
+margin: 0 auto;
+padding: 0 ; 
+width: 413px;
+  }
+}
+
+
+
+
+
 }
 
 @media (max-width: 1195px) {
@@ -916,14 +950,7 @@
 }
 
 @media (max-width: 1080px) {
-  .anim-services {
-    margin-top: 200px;
-    display: block;
-    &__left {
-      display: flex;
-      width: 100%;
-    }
-  }
+
 
   .pre-scroll {
     position: relative;
@@ -970,6 +997,74 @@
   .service-contact__title  {
     font-size: 30px;
   }
+  
+
+
+  .anim-services .anim-services__anim-container {
+    margin: 0 auto;
+    padding: 0;
+    width: 250px;
+  }
+
+  .anim-services {
+    &__top-text {
+        font-size: 16px;
+    }
+
+
+    &__left-bg{
+      width: 250px;
+      height: 390px;
+    }
+    &__top {
+        top: 90px;
+    }
+
+    &__bot {
+        top: 160px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    &__bot,
+    &__top {
+        padding-left: 15px;
+        padding-right: 15px;
+        width: calc(250px - 30px);
+     
+    }
+
+    &__bottom-cvg{
+display: none;
+    }
+
+
+    &__bot-define {
+font-size: 16px;
+line-height: 150%;
+    }
+
+    &__bot-dot {
+        height: 2px;
+        width: 12px;
+    }
+
+    &__bot-url {
+        font-size: 16px;
+    }
+
+    &__bot-title {
+        font-size: 17px;
+margin-top: 7px;
+    }
+
+    &__bot-text {
+        margin-top: 5px;
+        font-size: 16px;
+line-height: 120%;
+
+    }
+}
 
   .service-partner {
     position: relative;

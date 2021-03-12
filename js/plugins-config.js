@@ -313,85 +313,55 @@ if (document.querySelector('.services-slider__slider')) {
   );
 }
 //end slick slider - services
-// .setClassToggle(".anim-services__anim-container", "active") // add class toggle
 
-
-
+// start services animation 
 const getEnterText = () => {
-  // function setupTypewriter(t) {
-  //   var HTML = t.innerHTML;
+  function setupTypewriter(t) {
+    var HTML = t.innerHTML;
+    t.innerHTML = "";
+    var cursorPosition = 0,
+      typeSpeed = 100,
+      tempTypeSpeed = 0;
 
-  //   t.innerHTML = "";
+    var type = function () {
+      tempTypeSpeed = (Math.random() * typeSpeed) + 50;
+      t.innerHTML += HTML[cursorPosition];
+      cursorPosition += 1;
+      if (cursorPosition < HTML.length) {
+        setTimeout(type, tempTypeSpeed);
+      }
+      if (cursorPosition == HTML.length) {
+        document.querySelector('.anim-services__bot').classList.add('active')
+        setTimeout(() => {
+          document.querySelector('.anim-services__bottom-cvg').classList.add('active')
+        }, 500)
+      }
+    };
 
-  //   var cursorPosition = 0,
-  //     tag = "",
-  //     writingTag = false,
-  //     tagOpen = false,
-  //     typeSpeed = 100,
-  //     tempTypeSpeed = 0;
-  //   HTML[cursorPosition] = 'Y'
-  //   var type = function () {
-     
-   
-    
-  //     if (!writingTag && !tagOpen) {
-  //       if (HTML[cursorPosition] === " ") {
-  //         tempTypeSpeed = 0;
-  //       }
-  //       else {
-  //         tempTypeSpeed = (Math.random() * typeSpeed) + 50;
-  //       }
-  //       t.innerHTML += HTML[cursorPosition];
-  //     }
-  //     if (writingTag === true && HTML[cursorPosition] === ">") {
-  //       tempTypeSpeed = (Math.random() * typeSpeed) + 50;
-  //       writingTag = false;
-  //       if (tagOpen) {
-  //         var newSpan = document.createElement("span");
-  //         t.appendChild(newSpan);
-  //         newSpan.innerHTML = tag;
-  //         tag = newSpan.firstChild;
-  //       }
-  //     }
+    return {
+      type: type
+    };
+  }
 
-  //     cursorPosition += 1;
-  //     if (cursorPosition < HTML.length - 1) {
-  //       setTimeout(type, tempTypeSpeed);
-  //     }
-
-
-  //     if (cursorPosition == HTML.length - 1) {
-  //       console.log('done');
-  //     }
-  //     console.log(cursorPosition);
-  //   };
-  //   return {
-  //     type: type
-  //   };
-  // }
-
-  // var typer = document.getElementById('typewriter');
-  // typewriter = setupTypewriter(typewriter);
-  // typewriter.type();
+  var typewriter = document.getElementById('typewriter');
+  typewriter = setupTypewriter(typewriter);
+  typewriter.type();
 }
-
 
 const getResetText = () => {
-
+  document.querySelector('.anim-services__bottom-cvg').classList.remove('active')
+  document.querySelector('.anim-services__bot').classList.remove('active')
 }
-// start services animation 
 
-new ScrollMagic.Scene({ triggerElement: ".anim-services__anim-container" })
+new ScrollMagic.Scene({ triggerElement: ".anim-services__anim-container", triggerHook: 'onEnter' })
+  .setTween('.anim-services__anim-container', .8, { opacity: '1', transform: 'translateX(40px)' }, { duration: 500 })
   .addTo(controller)
   .on("enter", () => {
     getEnterText()
   })
   .on("leave", () => {
     getResetText()
-    console.log('leave');
   })
-
-
 
 
 // end services animation 
