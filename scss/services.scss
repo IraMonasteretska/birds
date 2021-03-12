@@ -419,3 +419,17 @@ justify-content: flex-end;
 	0%{opacity: 0;}
 	100%{opacity: 1;}
 }
+
+.pre-scroll-services{
+    .pre-scroll__left{
+        transform: translateY(-80px);
+    }
+    .pre-scroll__bg{
+        top: 0px;
+    }
+
+}
+
+.pre-scroll.pre-scroll-services{
+    align-items: flex-start;
+}
