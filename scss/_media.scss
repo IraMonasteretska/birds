@@ -379,6 +379,10 @@
 @media (max-width: 1330px){
 
 
+  .pre-scroll.pre-scroll-services.two-pre-scroll{
+    margin-bottom: 30px ;
+  }
+
   .pre-scroll {
     position: relative;
     display: block;
@@ -1094,6 +1098,22 @@ line-height: 120%;
       height: 300px;
     }
   }
+
+
+
+  .services-slider {
+   
+    &__slider {
+        &:before {
+            top: -43px;
+        }
+    }
+ 
+    .slick-arrow {
+        top: -55px;
+    }
+}
+
 
   .benefits {
     margin-top: 100px;
@@ -2614,6 +2634,9 @@ line-height: 120%;
   .two-sections-scroll {
     height: 650px;
   }
+  .two-sections-scroll.two-sections-scroll-services {
+    height: 950px;
+  }
   .two-sections-scroll-about {
     height: 980px;
   }
@@ -2621,6 +2644,12 @@ line-height: 120%;
     .two-sections-scroll-about {
       height: 780px;
     }
+  }
+}
+
+@media (min-height: 800px) {
+.sup-scroll__text {
+      margin-bottom: -500px;
   }
 }
 
