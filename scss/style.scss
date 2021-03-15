@@ -456,9 +456,9 @@
     position: absolute;
     z-index: 0;
     top: 150px;
-    right: 0;
+    right: 60px;
     bottom: -600px;
-    left: 0px;
+    left: 60px;
     background-image: url(../img/main-page/bg-green.png);
     background-position: center 200px;
   }
@@ -530,7 +530,7 @@
 }
 
 .first-section-scroll {
-  flex: 0 0 150px;
+  flex: 0 0 180px;
 }
 
 .section-scroll {
