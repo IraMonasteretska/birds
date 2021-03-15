@@ -106,7 +106,7 @@
     margin-right: 150px;
   }
   &__title {
-    font-family: "Times New Roman";
+    font-family: "PT Serif";
     font-style: normal;
     font-weight: bold;
     font-size: 62px;
@@ -117,7 +117,7 @@
   }
 
   &__title--color {
-    font-family: "Times New Roman";
+    font-family: "PT Serif";
     font-style: normal;
     font-weight: bold;
     font-size: 62px;
@@ -184,7 +184,7 @@
   }
 
   &__left-title {
-    font-family: "Times New Roman";
+    font-family: "PT Serif";
     font-style: normal;
     font-weight: bold;
     font-size: 58px;
@@ -287,20 +287,19 @@
   align-items: center;
   height: 255px;
   &__left {
-  width: 100%;
+    width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
   &__right-cont {
-    width: calc(65% );
+    width: calc(65%);
     height: 100%;
   }
   &__left-cont {
     width: calc(35% - 30px);
     height: 100%;
   }
-  
 }
 
 .video-block {
@@ -343,7 +342,7 @@
   }
 
   &__title {
-    font-family: "Times New Roman";
+    font-family: "PT Serif";
     font-style: normal;
     font-weight: bold;
     font-size: 58px;
@@ -389,7 +388,7 @@
   }
 
   &__title {
-    font-family: "Times New Roman";
+    font-family: "PT Serif";
     font-style: normal;
     font-weight: bold;
     font-size: 58px;
@@ -452,20 +451,19 @@
   align-items: flex-end;
   margin-top: 200px;
   position: relative;
-margin-bottom: 90px;
+  margin-bottom: 90px;
   &__bg {
     position: absolute;
     z-index: 0;
     top: 150px;
     right: 0;
     bottom: -600px;
-    //  height: 1000px;
     left: 0px;
     background-image: url(../img/main-page/bg-green.png);
     background-position: center 200px;
   }
   &__left {
-    width: calc(35% - 60px);
+    width: calc(35% - 80px);
     z-index: 2;
     height: 530px;
   }
@@ -475,15 +473,14 @@ margin-bottom: 90px;
     object-fit: cover;
     display: block;
     height: 100%;
-
   }
-  &__left-container{
+  &__left-container {
     height: 530px;
     max-width: 430px;
     position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     width: 100%;
     margin-left: 120px;
   }
@@ -499,7 +496,7 @@ margin-bottom: 90px;
   }
 
   &__title {
-    font-family: "Times New Roman";
+    font-family: "PT Serif";
     font-style: normal;
     font-weight: bold;
     font-size: 58px;
@@ -626,7 +623,7 @@ margin-bottom: 90px;
 
   &__title {
     margin: 0;
-    font-family: "Times New Roman";
+    font-family: "PT Serif";
     font-style: normal;
     font-weight: bold;
     font-size: 58px;
@@ -717,7 +714,6 @@ margin-bottom: 90px;
     }
   }
 
-  
   &__quadro {
     position: absolute;
     width: calc(35% + (65% * 0.43) - 120px);
@@ -732,7 +728,7 @@ margin-bottom: 90px;
     height: 100%;
     object-fit: cover;
   }
-  &__quadro-letters{
+  &__quadro-letters {
     margin: 0;
     position: absolute;
     bottom: -0px;
@@ -742,13 +738,17 @@ margin-bottom: 90px;
     width: 100%;
   }
 
-  &__quadro-gradient{
+  &__quadro-gradient {
     width: 100%;
     // height: 100%;
     position: absolute;
     z-index: 3;
-    background: linear-gradient(180deg, rgba(52, 52, 52, 0.372) 0%, rgba(45, 45, 45, 0.6) 52.6%, rgba(45, 45, 45, 0.6) 100%);
- 
+    background: linear-gradient(
+      180deg,
+      rgba(52, 52, 52, 0.372) 0%,
+      rgba(45, 45, 45, 0.6) 52.6%,
+      rgba(45, 45, 45, 0.6) 100%
+    );
   }
 }
 
@@ -769,7 +769,7 @@ margin-bottom: 90px;
   }
 
   &__problem-title {
-    font-family: "Times New Roman";
+    font-family: "PT Serif";
     font-weight: bold;
     font-size: 22px;
     line-height: 140%;
@@ -786,7 +786,7 @@ margin-bottom: 90px;
 
   &__answer-title {
     margin-top: 40px;
-    font-family: "Times New Roman";
+    font-family: "PT Serif";
     font-style: normal;
     font-weight: bold;
     font-size: 22px;
@@ -851,9 +851,9 @@ margin-bottom: 90px;
 
 .contact {
   padding: 80px;
-  
+
   &__title {
-    font-family: "Times New Roman";
+    font-family: "PT Serif";
     font-style: normal;
     font-weight: bold;
     font-size: 38px;
@@ -889,7 +889,7 @@ margin-bottom: 90px;
     width: 43%;
     border: none;
     border-bottom: 1px solid #313231;
-    font-family: "Times New Roman";
+    font-family: "PT Serif";
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
@@ -904,7 +904,7 @@ margin-bottom: 90px;
     }
     &:focus::placeholder {
       color: #f5f5f7;
-      transition: all .5s;
+      transition: all 0.5s;
     }
   }
 
@@ -942,15 +942,15 @@ margin-bottom: 90px;
     }
   }
 
-  &__svg{
+  &__svg {
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    transition: all .3s;
+    transition: all 0.3s;
     cursor: pointer;
   }
-  &__svg.active{
+  &__svg.active {
     transform: translateY(-50%) rotate(180deg);
   }
 
@@ -962,31 +962,31 @@ margin-bottom: 90px;
     border-radius: 8px;
     padding: 20px;
     opacity: 0;
-    transition: all .3s;
+    transition: all 0.3s;
     z-index: -1;
   }
 
   &__select-options.active {
-opacity: 1;
-z-index: 1;
+    opacity: 1;
+    z-index: 1;
   }
 
   &__select-option {
     margin: 0;
-padding: 6px 0 6px 0;
-cursor: pointer;
-font-size: 18px;
-transition: all .3s;
-font-family: "Times New Roman";
-font-style: normal;
-font-weight: bold;
-line-height: 140%;
-letter-spacing: 0.09em;
-color: #313231;
+    padding: 6px 0 6px 0;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s;
+    font-family: "PT Serif";
+    font-style: normal;
+    font-weight: bold;
+    line-height: 140%;
+    letter-spacing: 0.09em;
+    color: #313231;
 
-&:hover{
-  color: #f5c860;;
-}
+    &:hover {
+      color: #f5c860;
+    }
   }
 }
 
@@ -1004,21 +1004,21 @@ color: #313231;
   }
 
   &__title {
-    font-family: 'Times New Roman';
-font-style: normal;
-font-weight: bold;
-font-size: 58px;
-line-height: 130%;
-letter-spacing: 0.09em;
-color: #313231;
-margin: 0;
+    font-family: "PT Serif";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 58px;
+    line-height: 130%;
+    letter-spacing: 0.09em;
+    color: #313231;
+    margin: 0;
   }
 
   &__year {
     font-size: 12px;
-line-height: 130%;
-text-align: right;
-color: #5D5D5D;
+    line-height: 130%;
+    text-align: right;
+    color: #5d5d5d;
   }
 
   &__container {
@@ -1037,21 +1037,20 @@ color: #5D5D5D;
 
   &__text {
     font-size: 18px;
-line-height: 160%;
-color: #FFFFFF;
-margin: 5px;  
-
+    line-height: 160%;
+    color: #ffffff;
+    margin: 5px;
   }
 
   &__btn {
     margin-top: 25px;
-    color: #FFFFFF;
-    border: 1px solid #fff
+    color: #ffffff;
+    border: 1px solid #fff;
   }
 
   &__right {
     width: calc(65% - 30px);
-    height: 255px ;
+    height: 255px;
   }
 
   &__img {
@@ -1061,11 +1060,9 @@ margin: 5px;
   }
 }
 
-
-.first-sections-scroll{
+.first-sections-scroll {
   position: relative;
 }
-
 
 // .first-sections-scroll {
 //       height: 980px;
@@ -1077,10 +1074,10 @@ margin: 5px;
 //       height: 980px;
 //     }
 
-.pre-scroll__btn-first{
+.pre-scroll__btn-first {
   align-items: flex-end;
   display: flex;
-  a{
+  a {
     width: 100%;
   }
 }

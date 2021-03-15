@@ -6,8 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.min.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 
@@ -105,27 +108,31 @@
 </div>
 </div>
 
-  <footer class="footer container">
-    <div class="footer__texts">
-      <h3 class="footer__title">Our contacts</h3>
-      <p class="footer__year">All Rights Reserved © Birds View 2021</p>
+<footer class="footer container">
+  <div class="footer__texts">
+    <h3 class="footer__title">Our contacts</h3>
+    <p class="footer__year">All Rights Reserved © Birds View 2021</p>
+  </div>
+  <div class="footer__container">
+    <div class="footer__left" data-aos="fade-right"
+    data-aos-duration="3000">
+      <p class="footer__text">Birds View | 2826023-4
+      </p>
+      <p class="footer__text">Tahkonkuja 1 E
+      </p>
+      <p class="footer__text">20520 Turku
+      </p>
+      <a href="#" class="footer__btn standart-button-link">Contact us</a>
     </div>
-    <div class="footer__container">
-      <div class="footer__left">
-        <p class="footer__text">Birds View | 2826023-4
-        </p>
-        <p class="footer__text">Tahkonkuja 1 E
-        </p>
-        <p class="footer__text">20520 Turku
-        </p>
-        <a href="#" class="footer__btn standart-button-link">Contact us</a>
-      </div>
-      <div class="footer__right image__animation-container">
-        <img src="img/fb-horizont.png" alt="img" class="footer__img image__animation">
-        <div class="image__animation-block image__animation-block-footer"></div>
-      </div>
+    <div class="footer__right image__animation-container" data-aos="fade-left"
+    data-aos-duration="3000" >
+      <img src="img/fb-horizont.png" alt="img" class="footer__img image__animation">
+      <div class="image__animation-block image__animation-block-footer"></div>
     </div>
-  </footer>
+  </div>
+</footer>
+
+
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -135,7 +142,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/plugins/animation.gsap.js"></script>
   <script src="js/main.js"></script>
   <script src="js/plugins-config.js"></script>
-
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

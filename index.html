@@ -7,6 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
@@ -154,23 +156,17 @@
   </section>
 
   <section class="horizontal-block container " >
-    <div class="horizontal-block__left-cont image__animation-container" data-aos="fade-right"
+    <div class="horizontal-block__left-cont " data-aos="fade-right"
     data-aos-duration="3000" >
-      <img src="img/main-page/horizontal-img.svg" class="horizontal-block__left image__animation" alt="">
-      <div class="image__animation-block horizontal-block__animation-blok-left"></div>
+      <img src="img/main-page/horizontal-img.svg" class="horizontal-block__left " alt="">
     </div> 
-    <div class="horizontal-block__right-cont image__animation-container" data-aos="fade-left"
+    <div class="horizontal-block__right-cont " data-aos="fade-left"
     data-aos-duration="3000">
-    <img src="img/fb-horizont.png" class="horizontal-block__right image__animation" alt="">
-    <div class="image__animation-block horizontal-block__animation-blok"></div>
+    <img src="img/fb-horizont.png" class="horizontal-block__right " alt="">
   </div>
   </section>
 
-
-
   <section class="video-block container">
-    
-
     <div class="video-block__right">
       <h3 class="video-block__title">
         Are you keeping up with 
@@ -191,7 +187,8 @@
       </div>
     </div>
 
-    <div class="video-block__left">
+    <div class="video-block__left"  data-aos="fade-left"
+    data-aos-duration="3000">
       <video autoplay muted loop class="video-block__video">
         <source src="video/video.mp4">
         </source>
@@ -199,7 +196,6 @@
       <img src="img/main-page/video-mask.svg" alt="video-mask" class="video-block__video-mask">
     </div>
   </section>
-
 
   <section class="three-block container">
     <div class="three-block__left">
@@ -212,15 +208,8 @@
       <p class="three-block__text">
         We know your struggles, and we genuinely want to help you stand out. Our unique, carefully designed solution helps you organize your digital marketing activities, become agile and adaptable to changes and present a higher return on investment.
       </p>
-      <!-- <div class="three-block__text-more"> -->
-        <!-- <span class="standart-button-link three-block__view-more">View more</span> -->
         <p class="three-block__text">
           Our solution is specially made for companies selling high-value items or services. </p>
-        <!-- <p class="three-block__text hidden">
-          In the ever-changing modern world with the increasingly accelerating digitalization and technological
-          revolution, both new and experienced companies struggle to keep up.
-        </p> -->
-      <!-- </div> -->
     </div>
   </section>
 
@@ -248,9 +237,6 @@
       digital marketing plan for traffic generation.
     </p>
       <p class="pre-scroll__parts pre-scroll__btn pre-scroll__btn-first"> <a href="#" class="standart-button-link">More about Our Solutions</a> </p>
-      <!-- <p class="pre-scroll__parts pre-scroll__text"> Our digital marketing solution consists of website design and a
-        digital marketing plan for traffic generation. </p> -->
-
     </div>
   </section>
 
@@ -330,12 +316,14 @@
   </div>
 
   <section class="our-concept container">
-    <div class="our-concept__quadro  our-concept__quadro-first image__animation-container " data-aos="fade-up"
-    data-aos-duration="3000">
-      <img src="img/fb-horizont.png" class="our-concept__quadro-img image__animation" alt="image">
-      <div class="image__animation-block image__animation-block-quadro-first"></div>
-      <img src="img/main-page/main-page__laters.svg" class="our-concept__quadro-letters" alt="leters">
-      <div class="our-concept__quadro-gradient image__animation"> </div>
+    <div class="our-concept__quadro  our-concept__quadro-first image__animation-container " >
+      <img src="img/fb-horizont.png" class="our-concept__quadro-img image__animation" alt="image" data-aos="fade-up"
+      data-aos-duration="3000">
+      <!-- <div class="image__animation-block image__animation-block-quadro-first" ></div> -->
+      <img src="img/main-page/main-page__laters.svg" class="our-concept__quadro-letters" data-aos="fade-up"
+      data-aos-duration="3000" alt="leters">
+      <div class="our-concept__quadro-gradient image__animation" data-aos="fade-up"
+      data-aos-duration="3000" > </div>
     </div>
     <h3 class="our-concept__title">
       Our concept is easy as ABC:
@@ -603,9 +591,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/ScrollMagic.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/plugins/animation.gsap.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/main.js"></script>
   <script src="js/plugins-config.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
