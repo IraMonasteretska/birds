@@ -2705,6 +2705,15 @@ margin-top: 220px;
 /////////////////////
 /// height media////
 ///////////////////
+@media (min-width: 1880px) {
+.contact-page-two__right_services.contact-page-two__right{
+  transform: translateX(-50px);
+}
+.contact-page-two__left_services {
+  margin-right: 90px;
+}
+}
+
 @media (min-height: 1280px) {
   .pre-scroll-smoll {
     display: none !important;
