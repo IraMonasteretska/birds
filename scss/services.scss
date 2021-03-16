@@ -189,7 +189,6 @@
 
   &__item {
     display: flex;
-    justify-content: flex-end;
     flex-direction: column;
     width: 30%;
     margin-top: 70px;
@@ -462,4 +461,8 @@
 
 .contact-page-two__text-services{
   width: 46.5%;
+}
+
+.benefits__item-bottom{
+  justify-content: flex-end;
 }
