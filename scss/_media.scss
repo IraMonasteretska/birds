@@ -1012,6 +1012,10 @@
     font-size: 30px;
   }
 
+  .header {
+height: 90px;
+  }
+
   .footer {
     margin-bottom: 30px;
   }
@@ -1586,6 +1590,10 @@
 }
 
 @media (max-width: 767px) {
+
+  .header {
+    height: 65px;
+      }
 
   .pre-scroll.pre-scroll-services.two-pre-scroll.anim-services{
     margin-top: 100px;
@@ -2252,6 +2260,8 @@ margin-top: 220px;
       width: 70%;
     }
   }
+
+
 }
 
 @media (max-width: 600px) {
