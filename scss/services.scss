@@ -116,13 +116,12 @@
 }
 
 .anim-services {
-  margin-top: 200px;
-  background: url(../img/main-page/bg-green.png);
-  margin-left: 60px;
-  margin-right: 60px;
+  // background: url(../img/main-page/bg-green.png);
+  // margin-left: 60px;
+  // margin-right: 60px;
   padding-bottom: 80px;
-  display: flex;
-  justify-content: space-between;
+  // display: flex;
+  // justify-content: space-between;
 
   &__text--bold {
     margin-top: 50px;
@@ -465,4 +464,11 @@
 
 .benefits__item-bottom{
   justify-content: flex-end;
+}
+
+.pre-scroll__bg-animation{
+  top: 0;
+  bottom: 0 !important;
+  left: 0;
+  right: 0;
 }
