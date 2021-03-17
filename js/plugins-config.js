@@ -78,14 +78,26 @@ if (document.querySelector(".first-sections-scroll")) {
     });
   }
 
-  new ScrollMagic.Scene({
-    triggerElement: ".first-wrapper-scroll",
-    triggerHook: "onLeave",
-    duration: "100%",
-  })
-    .setPin(".first-wrapper-scroll")
-    .setTween(horizontalSlide)
-    .addTo(controller);
+  if (window.matchMedia("(min-width: 1780px)").matches) {
+    new ScrollMagic.Scene({
+      triggerElement: ".first-wrapper-scroll",
+      triggerHook: "onLeave",
+      duration: "170%",
+    })
+      .setPin(".first-wrapper-scroll")
+      .setTween(horizontalSlide)
+      .addTo(controller);
+  }else if (window.matchMedia("(max-width: 1780px)").matches) {
+    new ScrollMagic.Scene({
+      triggerElement: ".first-wrapper-scroll",
+      triggerHook: "onLeave",
+      duration: "100%",
+    })
+      .setPin(".first-wrapper-scroll")
+      .setTween(horizontalSlide)
+      .addTo(controller);
+  }
+
 
   let sections = document.querySelector(".first-sections-scroll");
   let section = document.querySelectorAll(".section-scroll");
