@@ -82,7 +82,7 @@ if (document.querySelector(".first-sections-scroll")) {
     new ScrollMagic.Scene({
       triggerElement: ".first-wrapper-scroll",
       triggerHook: "onLeave",
-      duration: "115%",
+      duration: "100%",
     })
       .setPin(".first-wrapper-scroll")
       .setTween(horizontalSlide)
