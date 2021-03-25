@@ -128,6 +128,7 @@ if (document.querySelector(".first-sections-scroll")) {
 // end scroll animation - first
 
 // start two pre scroll
+if (document.querySelector(".two-pre-scroll.pre-scroll-smoll")) { 
 let hup = document.querySelector(".two-pre-scroll.pre-scroll-smoll");
 var pre = new TimelineMax().to(".two-sections-scroll", 1, {
   x: "-5%",
@@ -141,6 +142,7 @@ new ScrollMagic.Scene({
 })
   .setTween(pre)
   .addTo(controller);
+}
 // end two pre scroll
 
 // start scroll animation - two
