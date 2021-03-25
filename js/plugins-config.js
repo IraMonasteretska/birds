@@ -87,7 +87,7 @@ if (document.querySelector(".first-sections-scroll")) {
       .setPin(".first-wrapper-scroll")
       .setTween(horizontalSlide)
       .addTo(controller);
-  }else if (window.matchMedia("(max-width: 1780px)").matches) {
+  } else if (window.matchMedia("(max-width: 1780px)").matches) {
     new ScrollMagic.Scene({
       triggerElement: ".first-wrapper-scroll",
       triggerHook: "onLeave",
@@ -97,7 +97,6 @@ if (document.querySelector(".first-sections-scroll")) {
       .setTween(horizontalSlide)
       .addTo(controller);
   }
-
 
   let sections = document.querySelector(".first-sections-scroll");
   let section = document.querySelectorAll(".section-scroll");
@@ -128,12 +127,32 @@ if (document.querySelector(".first-sections-scroll")) {
 }
 // end scroll animation - first
 
+// start two pre scroll
+let hup = document.querySelector(".two-pre-scroll.pre-scroll-smoll");
+var pre = new TimelineMax().to(".two-sections-scroll", 1, {
+  x: "-5%",
+  ease: Linear.easeNone,
+});
+new ScrollMagic.Scene({
+  triggerElement: ".two-pre-scroll.pre-scroll-smoll",
+  triggerHook: "onLeave",
+  duration: hup.clientHeight + "px",
+  // offset: 150,
+})
+  .setTween(pre)
+  .addTo(controller);
+// end two pre scroll
+
 // start scroll animation - two
 if (document.querySelector(".two-sections-scroll")) {
   if (window.matchMedia("(min-width: 700px)").matches) {
     var horizontalSlide = new TimelineMax().to(".two-sections-scroll", 1, {
       x: "-80%",
+      ease: Linear.easeNone,
     });
+    // .to(".two-sections-scroll", 1, {
+    // x: "-90%", y:  '-10%', ease: Linear.easeNone
+    // });
   } else if (window.matchMedia("(max-width: 700px)").matches) {
     var horizontalSlide = new TimelineMax().to(".two-sections-scroll", 1, {
       x: "-90%",
@@ -231,64 +250,92 @@ if (document.querySelector(".services-slider__slider")) {
 //end slick slider - services
 
 // start services animation
-const getEnterText = () => {
-  function setupTypewriter(t) {
-    var HTML = t.innerHTML;
-    t.innerHTML = "";
-    var cursorPosition = 0,
-      typeSpeed = 100,
-      tempTypeSpeed = 0;
+// const getEnterText = () => {
+//   function setupTypewriter(t) {
+//     var HTML = t.innerHTML;
+//     t.innerHTML = "";
+//     var cursorPosition = 0,
+//       typeSpeed = 100,
+//       tempTypeSpeed = 0;
 
-    var type = function () {
-      tempTypeSpeed = Math.random() * typeSpeed + 50;
-      t.innerHTML += HTML[cursorPosition];
-      cursorPosition += 1;
-      if (cursorPosition < HTML.length) {
-        setTimeout(type, tempTypeSpeed);
-      }
-      if (cursorPosition == HTML.length) {
-        document.querySelector(".anim-services__bot").classList.add("active");
-        setTimeout(() => {
-          document
-            .querySelector(".anim-services__bottom-cvg")
-            .classList.add("active");
-        }, 500);
-      }
-    };
+//     var type = function () {
+//       tempTypeSpeed = Math.random() * typeSpeed + 50;
+//       t.innerHTML += HTML[cursorPosition];
+//       cursorPosition += 1;
+//       if (cursorPosition < HTML.length) {
+//         setTimeout(type, tempTypeSpeed);
+//       }
+//       if (cursorPosition == HTML.length) {
+//         document.querySelector(".anim-services__bot").classList.add("active");
+//         setTimeout(() => {
+//           document
+//             .querySelector(".anim-services__bottom-cvg")
+//             .classList.add("active");
+//         }, 500);
+//       }
+//     };
 
-    return {
-      type: type,
-    };
-  }
+//     return {
+//       type: type,
+//     };
+//   }
 
-  var typewriter = document.getElementById("typewriter");
-  typewriter = setupTypewriter(typewriter);
-  typewriter.type();
-};
+//   var typewriter = document.getElementById("typewriter");
+//   typewriter = setupTypewriter(typewriter);
+//   typewriter.type();
+// };
 
-const getResetText = () => {
-  document
-    .querySelector(".anim-services__bottom-cvg")
-    .classList.remove("active");
-  document.querySelector(".anim-services__bot").classList.remove("active");
-};
+// const getResetText = () => {
+//   document
+//     .querySelector(".anim-services__bottom-cvg")
+//     .classList.remove("active");
+//   document.querySelector(".anim-services__bot").classList.remove("active");
+// };
 
-new ScrollMagic.Scene({
-  triggerElement: ".anim-services__anim-container",
-  triggerHook: "onEnter",
-})
-  .setTween(
-    ".anim-services__anim-container",
-    0.8,
-    { opacity: "1", transform: "translateX(40px)" },
-    { duration: 500 }
-  )
-  .addTo(controller)
-  .on("enter", () => {
-    getEnterText();
-  })
-  .on("leave", () => {
-    getResetText();
-  });
+// new ScrollMagic.Scene({
+//   triggerElement: ".anim-services__anim-container",
+//   triggerHook: "onEnter",
+// })
+//   .setTween(
+//     ".anim-services__anim-container",
+//     0.8,
+//     { opacity: "1", transform: "translateX(40px)" },
+//     { duration: 500 }
+//   )
+//   .addTo(controller)
+//   .on("enter", () => {
+//     getEnterText();
+//   })
+//   .on("leave", () => {
+//     getResetText();
+//   });
 
 // end services animation
+
+// start fade anim for two scroll
+
+var tween1 = new TimelineMax().to(".pre-scroll__right", 1.5, { opacity: 0 });
+
+new ScrollMagic.Scene({
+  triggerElement: ".two-sections-scroll",
+  triggerHook: "onEnter",
+  duration: "100%",
+  offset: 290,
+})
+  .setTween(tween1)
+  .addTo(controller);
+
+var tween2 = new TimelineMax().to(".two-pre-scroll .pre-scroll__img-two", 1.5, {
+  opacity: 0,
+});
+
+new ScrollMagic.Scene({
+  triggerElement: ".two-sections-scroll",
+  triggerHook: "onEnter",
+  duration: "100%",
+  offset: 290,
+})
+  .setTween(tween2)
+  .addTo(controller);
+
+// end fade anim for two scroll
