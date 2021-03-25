@@ -147,12 +147,30 @@ new ScrollMagic.Scene({
 if (document.querySelector(".two-sections-scroll")) {
   if (window.matchMedia("(min-width: 700px)").matches) {
     var horizontalSlide = new TimelineMax().to(".two-sections-scroll", 1, {
-      x: "-80%",
+      x: "-10%",
       ease: Linear.easeNone,
+    }).to(".two-sections-scroll", 1, {
+      x: "-20%",
+      ease: Linear.easeNone,
+    }).to(".two-sections-scroll", 1, {
+      x: "-30%",
+      ease: Linear.easeNone,
+    }).to(".two-sections-scroll", 1, {
+      x: "-40%",
+      ease: Linear.easeNone,
+    }).to(".two-sections-scroll", 1, {
+      x: "-50%",
+      ease: Linear.easeNone,
+    }).to(".two-sections-scroll", 1, {
+      x: "-60%",
+      ease: Linear.easeNone,
+    }).to(".two-sections-scroll", 1, {
+      x: "-70%",
+      ease: Linear.easeNone,
+    })
+    .to(".two-sections-scroll", 1, {
+    x: "-80%", y:  '-17%', ease: Linear.easeNone
     });
-    // .to(".two-sections-scroll", 1, {
-    // x: "-90%", y:  '-10%', ease: Linear.easeNone
-    // });
   } else if (window.matchMedia("(max-width: 700px)").matches) {
     var horizontalSlide = new TimelineMax().to(".two-sections-scroll", 1, {
       x: "-90%",
@@ -166,7 +184,7 @@ if (document.querySelector(".two-sections-scroll")) {
   new ScrollMagic.Scene({
     triggerElement: ".two-wrapper-scroll",
     triggerHook: "onLeave",
-    duration: "400%",
+    duration: "300%",
   })
     .setPin(".two-wrapper-scroll")
     .setTween(horizontalSlide)
@@ -339,3 +357,18 @@ new ScrollMagic.Scene({
   .addTo(controller);
 
 // end fade anim for two scroll
+
+
+
+var tween3 = new TimelineMax().to(".contact-section ", 1.5, {
+  opacity: 1,
+});
+
+new ScrollMagic.Scene({
+  triggerElement: ".contact-section .our-concept__title",
+  triggerHook: "onEnter",
+  duration: "100%",
+  // offset: 290,
+})
+  .setTween(tween3)
+  .addTo(controller);
