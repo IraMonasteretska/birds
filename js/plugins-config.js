@@ -127,92 +127,207 @@ if (document.querySelector(".first-sections-scroll")) {
 }
 // end scroll animation - first
 
-// start two pre scroll
-if (document.querySelector(".two-pre-scroll.pre-scroll-smoll")) { 
-let hup = document.querySelector(".two-pre-scroll.pre-scroll-smoll");
-var pre = new TimelineMax().to(".two-sections-scroll", 1, {
-  x: "-5%",
-  ease: Linear.easeNone,
-});
-new ScrollMagic.Scene({
-  triggerElement: ".two-pre-scroll.pre-scroll-smoll",
-  triggerHook: "onLeave",
-  duration: hup.clientHeight + "px",
-  // offset: 150,
-})
-  .setTween(pre)
-  .addTo(controller);
-}
-// end two pre scroll
-
-// start scroll animation - two
-if (document.querySelector(".two-sections-scroll")) { 
-  if (window.matchMedia("(min-width: 700px)").matches) {
-    var horizontalSlide = new TimelineMax().to(".two-sections-scroll", 1, {
-      x: "-10%",
+if (window.matchMedia("(min-height: 1280px)").matches) {
+  let marg = document.querySelector(".our-concept");
+  let margBottom = parseInt(
+    window.getComputedStyle(marg, null).getPropertyValue("margin-bottom")
+  );
+  // start two pre scroll
+  if (document.querySelector(".two-pre-scroll.pre-scroll-smoll")) {
+    var pre = new TimelineMax().to(".two-sections-scroll", 1, {
+      x: "-7%",
       ease: Linear.easeNone,
+    });
+    new ScrollMagic.Scene({
+      triggerElement: ".our-concept",
+      triggerHook: "onLeave",
+      duration: margBottom + "px",
+      offset: marg.clientHeight +'px',
     })
-    .to(".two-sections-scroll", 1, {
-      x: "-20%",
-      ease: Linear.easeNone,
-    }).to(".two-sections-scroll", 1, {
-      x: "-30%",
-      ease: Linear.easeNone,
-    }).to(".two-sections-scroll", 1, {
-      x: "-40%",
-      ease: Linear.easeNone,
-    }).to(".two-sections-scroll", 1, {
-      x: "-50%",
-      ease: Linear.easeNone,
-    }).to(".two-sections-scroll", 1, {
-      x: "-60%",
-      ease: Linear.easeNone,
-    }).to(".two-sections-scroll", 1, {
-      x: "-70%",
-      ease: Linear.easeNone,
-    }) .to(".two-sections-scroll", 1, {
-          x: "-80%", y:  '-17%', ease: Linear.easeNone
-          });
-   
-  } else if (window.matchMedia("(max-width: 700px)").matches) {
-    var horizontalSlide = new TimelineMax().to(".two-sections-scroll", 1, {
-      x: "-90%",
-    });
-  } else if (window.matchMedia("(max-width: 450px)").matches) {
-    var horizontalSlide = new TimelineMax().to(".two-sections-scroll", 1, {
-      x: "-100%",
-    });
+      .setTween(pre)
+      .addTo(controller);
   }
+  // end two pre scroll
 
-  new ScrollMagic.Scene({
-    triggerElement: ".two-wrapper-scroll",
-    triggerHook: "onLeave",
-    duration: "300%",
-  })
-    .setPin(".two-wrapper-scroll")
-    .setTween(horizontalSlide)
-    .addTo(controller);
+  // start scroll animation - two
+  if (document.querySelector(".two-sections-scroll")) {
+    if (window.matchMedia("(min-width: 700px)").matches) {
+      var horizontalSlide = new TimelineMax()
+        .to(".two-sections-scroll", 1, {
+          x: "-10%",
+          ease: Linear.easeNone,
+        })
+        .to(".two-sections-scroll", 1, {
+          x: "-20%",
+          ease: Linear.easeNone,
+        })
+        .to(".two-sections-scroll", 1, {
+          x: "-30%",
+          ease: Linear.easeNone,
+        })
+        .to(".two-sections-scroll", 1, {
+          x: "-40%",
+          ease: Linear.easeNone,
+        })
+        .to(".two-sections-scroll", 1, {
+          x: "-50%",
+          ease: Linear.easeNone,
+        })
+        .to(".two-sections-scroll", 1, {
+          x: "-60%",
+          ease: Linear.easeNone,
+        })
+        .to(".two-sections-scroll", 1, {
+          x: "-70%",
+          ease: Linear.easeNone,
+        })
+        .to(".two-wrapper-scroll", 1, {
+          x: "-10%",
+          y: "-37%",
+          opacity: '.5',
+          ease: Linear.easeNone,
+        })
+ 
+        .to(".two-wrapper-scroll", 1, {
+          opacity: '0',
+        })
+ 
+    } else if (window.matchMedia("(max-width: 700px)").matches) {
+      var horizontalSlide = new TimelineMax().to(".two-sections-scroll", 1, {
+        x: "-90%",
+      });
+    } else if (window.matchMedia("(max-width: 450px)").matches) {
+      var horizontalSlide = new TimelineMax().to(".two-sections-scroll", 1, {
+        x: "-100%",
+      });
+    }
 
-  let sections = document.querySelector(".two-sections-scroll");
-  let section = document.querySelectorAll(".section-scroll-two");
-  if (window.matchMedia("(min-width: 1000px)").matches) {
-    sections.style.width = section[0].offsetWidth * section.length - 600 + "px";
-  } else if (window.matchMedia("(max-width: 1000px)").matches) {
-    sections.style.width = section[0].offsetWidth * section.length + "px";
-  }
+    new ScrollMagic.Scene({
+      triggerElement: ".two-wrapper-scroll",
+      triggerHook: "onLeave",
+      duration: "300%",
+    })
+      .setPin(".two-wrapper-scroll")
+      .setTween(horizontalSlide)
+      .addTo(controller);
 
-  if (document.querySelector(".about-croll-wrapper")) {
+    let sections = document.querySelector(".two-sections-scroll");
+    let section = document.querySelectorAll(".section-scroll-two");
     if (window.matchMedia("(min-width: 1000px)").matches) {
       sections.style.width =
-        section[0].offsetWidth * section.length - 100 + "px";
-    } else if (window.matchMedia("(max-width: 400px)").matches) {
-      sections.style.width =
-        section[0].offsetWidth * section.length + 100 + "px";
+        section[0].offsetWidth * section.length - 600 + "px";
+    } else if (window.matchMedia("(max-width: 1000px)").matches) {
+      sections.style.width = section[0].offsetWidth * section.length + "px";
+    }
+
+    if (document.querySelector(".about-croll-wrapper")) {
+      if (window.matchMedia("(min-width: 1000px)").matches) {
+        sections.style.width =
+          section[0].offsetWidth * section.length - 100 + "px";
+      } else if (window.matchMedia("(max-width: 400px)").matches) {
+        sections.style.width =
+          section[0].offsetWidth * section.length + 100 + "px";
+      }
     }
   }
+  // end scroll animation - two
 }
-// end scroll animation - two
 
+if (window.matchMedia("(max-height: 1280px)").matches) {
+  // start two pre scroll
+  if (document.querySelector(".two-pre-scroll.pre-scroll-smoll")) {
+    let hup = document.querySelector(".two-pre-scroll.pre-scroll-smoll");
+    var pre = new TimelineMax().to(".two-sections-scroll", 1, {
+      x: "-5%",
+      ease: Linear.easeNone,
+    });
+    new ScrollMagic.Scene({
+      triggerElement: ".two-pre-scroll.pre-scroll-smoll",
+      triggerHook: "onLeave",
+      duration: hup.clientHeight + "px",
+    })
+      .setTween(pre)
+      .addTo(controller);
+  }
+  // end two pre scroll
+
+  // start scroll animation - two
+  if (document.querySelector(".two-sections-scroll")) {
+    if (window.matchMedia("(min-width: 700px)").matches) {
+      var horizontalSlide = new TimelineMax()
+        .to(".two-sections-scroll", 1, {
+          x: "-10%",
+          ease: Linear.easeNone,
+        })
+        .to(".two-sections-scroll", 1, {
+          x: "-20%",
+          ease: Linear.easeNone,
+        })
+        .to(".two-sections-scroll", 1, {
+          x: "-30%",
+          ease: Linear.easeNone,
+        })
+        .to(".two-sections-scroll", 1, {
+          x: "-40%",
+          ease: Linear.easeNone,
+        })
+        .to(".two-sections-scroll", 1, {
+          x: "-50%",
+          ease: Linear.easeNone,
+        })
+        .to(".two-sections-scroll", 1, {
+          x: "-60%",
+          ease: Linear.easeNone,
+        })
+        .to(".two-sections-scroll", 1, {
+          x: "-70%",
+          ease: Linear.easeNone,
+        })
+        .to(".two-sections-scroll", 1, {
+          x: "-80%",
+          y: "-17%",
+          ease: Linear.easeNone,
+        });
+    } else if (window.matchMedia("(max-width: 700px)").matches) {
+      var horizontalSlide = new TimelineMax().to(".two-sections-scroll", 1, {
+        x: "-90%",
+      });
+    } else if (window.matchMedia("(max-width: 450px)").matches) {
+      var horizontalSlide = new TimelineMax().to(".two-sections-scroll", 1, {
+        x: "-100%",
+      });
+    }
+
+    new ScrollMagic.Scene({
+      triggerElement: ".two-wrapper-scroll",
+      triggerHook: "onLeave",
+      duration: "300%",
+    })
+      .setPin(".two-wrapper-scroll")
+      .setTween(horizontalSlide)
+      .addTo(controller);
+
+    let sections = document.querySelector(".two-sections-scroll");
+    let section = document.querySelectorAll(".section-scroll-two");
+    if (window.matchMedia("(min-width: 1000px)").matches) {
+      sections.style.width =
+        section[0].offsetWidth * section.length - 600 + "px";
+    } else if (window.matchMedia("(max-width: 1000px)").matches) {
+      sections.style.width = section[0].offsetWidth * section.length + "px";
+    }
+
+    if (document.querySelector(".about-croll-wrapper")) {
+      if (window.matchMedia("(min-width: 1000px)").matches) {
+        sections.style.width =
+          section[0].offsetWidth * section.length - 100 + "px";
+      } else if (window.matchMedia("(max-width: 400px)").matches) {
+        sections.style.width =
+          section[0].offsetWidth * section.length + 100 + "px";
+      }
+    }
+  }
+  // end scroll animation - two
+}
 // start slick slider - blog
 $(".slider-blog__slider").slick({
   slidesToShow: 1,
@@ -271,196 +386,136 @@ if (document.querySelector(".services-slider__slider")) {
 //end slick slider - services
 
 // start services animation
-// const getEnterText = () => {
-//   function setupTypewriter(t) {
-//     var HTML = t.innerHTML;
-//     t.innerHTML = "";
-//     var cursorPosition = 0,
-//       typeSpeed = 100,
-//       tempTypeSpeed = 0;
+if (document.querySelector(".anim-services__anim-container")) {
+  const getEnterText = () => {
+    function setupTypewriter(t) {
+      var HTML = t.innerHTML;
+      t.innerHTML = "";
+      var cursorPosition = 0,
+        typeSpeed = 100,
+        tempTypeSpeed = 0;
 
-//     var type = function () {
-//       tempTypeSpeed = Math.random() * typeSpeed + 50;
-//       t.innerHTML += HTML[cursorPosition];
-//       cursorPosition += 1;
-//       if (cursorPosition < HTML.length) {
-//         setTimeout(type, tempTypeSpeed);
-//       }
-//       if (cursorPosition == HTML.length) {
-//         document.querySelector(".anim-services__bot").classList.add("active");
-//         setTimeout(() => {
-//           document
-//             .querySelector(".anim-services__bottom-cvg")
-//             .classList.add("active");
-//         }, 500);
-//       }
-//     };
+      var type = function () {
+        tempTypeSpeed = Math.random() * typeSpeed + 50;
+        t.innerHTML += HTML[cursorPosition];
+        cursorPosition += 1;
+        if (cursorPosition < HTML.length) {
+          setTimeout(type, tempTypeSpeed);
+        }
+        if (cursorPosition == HTML.length) {
+          document.querySelector(".anim-services__bot").classList.add("active");
+          setTimeout(() => {
+            document
+              .querySelector(".anim-services__bottom-cvg")
+              .classList.add("active");
+          }, 500);
+        }
+      };
 
-//     return {
-//       type: type,
-//     };
-//   }
+      return {
+        type: type,
+      };
+    }
 
-//   var typewriter = document.getElementById("typewriter");
-//   typewriter = setupTypewriter(typewriter);
-//   typewriter.type();
-// };
+    var typewriter = document.getElementById("typewriter");
+    typewriter = setupTypewriter(typewriter);
+    typewriter.type();
+  };
 
-// const getResetText = () => {
-//   document
-//     .querySelector(".anim-services__bottom-cvg")
-//     .classList.remove("active");
-//   document.querySelector(".anim-services__bot").classList.remove("active");
-// };
+  const getResetText = () => {
+    document
+      .querySelector(".anim-services__bottom-cvg")
+      .classList.remove("active");
+    document.querySelector(".anim-services__bot").classList.remove("active");
+  };
 
-// new ScrollMagic.Scene({
-//   triggerElement: ".anim-services__anim-container",
-//   triggerHook: "onEnter",
-// })
-//   .setTween(
-//     ".anim-services__anim-container",
-//     0.8,
-//     { opacity: "1", transform: "translateX(40px)" },
-//     { duration: 500 }
-//   )
-//   .addTo(controller)
-//   .on("enter", () => {
-//     getEnterText();
-//   })
-//   .on("leave", () => {
-//     getResetText();
-//   });
-
+  new ScrollMagic.Scene({
+    triggerElement: ".anim-services__anim-container",
+    triggerHook: "onEnter",
+  })
+    .setTween(
+      ".anim-services__anim-container",
+      0.8,
+      { opacity: "1", transform: "translateX(40px)" },
+      { duration: 500 }
+    )
+    .addTo(controller)
+    .on("enter", () => {
+      getEnterText();
+    })
+    .on("leave", () => {
+      getResetText();
+    });
+}
 // end services animation
 
 // start fade anim for two scroll
+if (window.matchMedia("(max-height: 1280px)").matches) {
+  var tween1 = new TimelineMax().to(".pre-scroll__right", 1.5, { opacity: 0 });
 
-var tween1 = new TimelineMax().to(".pre-scroll__right", 1.5, { opacity: 0 });
+  new ScrollMagic.Scene({
+    triggerElement: ".two-sections-scroll",
+    triggerHook: "onEnter",
+    duration: "100%",
+    offset: 290,
+  })
+    .setTween(tween1)
+    .addTo(controller);
 
-new ScrollMagic.Scene({
-  triggerElement: ".two-sections-scroll",
-  triggerHook: "onEnter",
-  duration: "100%",
-  offset: 290,
-})
-  .setTween(tween1)
-  .addTo(controller);
+  var tween2 = new TimelineMax().to(
+    ".two-pre-scroll .pre-scroll__img-two",
+    1.5,
+    {
+      opacity: 0,
+    }
+  );
 
-var tween2 = new TimelineMax().to(".two-pre-scroll .pre-scroll__img-two", 1.5, {
-  opacity: 0,
-});
+  new ScrollMagic.Scene({
+    triggerElement: ".two-sections-scroll",
+    triggerHook: "onEnter",
+    duration: "100%",
+    offset: 290,
+  })
+    .setTween(tween2)
+    .addTo(controller);
 
-new ScrollMagic.Scene({
-  triggerElement: ".two-sections-scroll",
-  triggerHook: "onEnter",
-  duration: "100%",
-  offset: 290,
-})
-  .setTween(tween2)
-  .addTo(controller);
+  // // end fade anim for two scroll
 
-// // end fade anim for two scroll
+  var tween3 = new TimelineMax().to(".contact-section ", 1.5, {
+    opacity: 1,
+  });
 
+  new ScrollMagic.Scene({
+    triggerElement: ".contact-section .our-concept__title",
+    triggerHook: "onEnter",
+    duration: "100%",
+    // offset: 290,
+  })
+    .setTween(tween3)
+    .addTo(controller);
+}
 
+if (window.matchMedia("(min-height: 1280px)").matches) {
+  var tween1 = new TimelineMax().to(".our-concept", 1.5, { opacity: 0 });
 
-var tween3 = new TimelineMax().to(".contact-section ", 1.5, {
-  opacity: 1,
-});
+  new ScrollMagic.Scene({
+    triggerElement: ".two-sections-scroll",
+    triggerHook: "onEnter",
+    duration: "100%",
+    offset: -390,
+  })
+    .setTween(tween1)
+    .addTo(controller);
 
-new ScrollMagic.Scene({
-  triggerElement: ".contact-section .our-concept__title",
-  triggerHook: "onEnter",
-  duration: "100%",
-  // offset: 290,
-})
-  .setTween(tween3)
-  .addTo(controller);
+  var tween3 = new TimelineMax().to(".contact-section ", 1.5, {
+    opacity: 1,
+  });
 
-
-
-
-
-
-
-
-
-//   let hup = document.querySelector(".two-pre-scroll.pre-scroll-smoll");
-// var pre = new TimelineMax().to(".two-sections-scroll", 1, {
-//   x: "-5%",
-//   ease: Linear.easeNone,
-// });
-// new ScrollMagic.Scene({
-//   triggerElement: ".two-pre-scroll.pre-scroll-smoll",
-//   triggerHook: "onLeave",
-//   duration: hup.clientHeight + "px",
-//   // offset: 150,
-// })
-//   .setTween(pre)
-//   .addTo(controller);
-// // end two pre scroll
-
-// // start scroll animation - two
-// if (document.querySelector(".two-sections-scroll")) {
-//   if (window.matchMedia("(min-width: 700px)").matches) {
-//     var horizontalSlide = new TimelineMax().to(".two-sections-scroll", 1, {
-//       x: "-10%",
-//       ease: Linear.easeNone,
-//     }).to(".two-sections-scroll", 1, {
-//       x: "-20%",
-//       ease: Linear.easeNone,
-//     }).to(".two-sections-scroll", 1, {
-//       x: "-30%",
-//       ease: Linear.easeNone,
-//     }).to(".two-sections-scroll", 1, {
-//       x: "-40%",
-//       ease: Linear.easeNone,
-//     }).to(".two-sections-scroll", 1, {
-//       x: "-50%",
-//       ease: Linear.easeNone,
-//     }).to(".two-sections-scroll", 1, {
-//       x: "-60%",
-//       ease: Linear.easeNone,
-//     }).to(".two-sections-scroll", 1, {
-//       x: "-70%",
-//       ease: Linear.easeNone,
-//     })
-//     .to(".two-sections-scroll", 1, {
-//     x: "-80%", y:  '-17%', ease: Linear.easeNone
-//     });
-//   } else if (window.matchMedia("(max-width: 700px)").matches) {
-//     var horizontalSlide = new TimelineMax().to(".two-sections-scroll", 1, {
-//       x: "-90%",
-//     });
-//   } else if (window.matchMedia("(max-width: 450px)").matches) {
-//     var horizontalSlide = new TimelineMax().to(".two-sections-scroll", 1, {
-//       x: "-100%",
-//     });
-//   }
-
-//   new ScrollMagic.Scene({
-//     triggerElement: ".two-wrapper-scroll",
-//     triggerHook: "onLeave",
-//     duration: "300%",
-//   })
-//     .setPin(".two-wrapper-scroll")
-//     .setTween(horizontalSlide)
-//     .addTo(controller);
-
-//   let sections = document.querySelector(".two-sections-scroll");
-//   let section = document.querySelectorAll(".section-scroll-two");
-//   if (window.matchMedia("(min-width: 1000px)").matches) {
-//     sections.style.width = section[0].offsetWidth * section.length - 600 + "px";
-//   } else if (window.matchMedia("(max-width: 1000px)").matches) {
-//     sections.style.width = section[0].offsetWidth * section.length + "px";
-//   }
-
-//   if (document.querySelector(".about-croll-wrapper")) {
-//     if (window.matchMedia("(min-width: 1000px)").matches) {
-//       sections.style.width =
-//         section[0].offsetWidth * section.length - 100 + "px";
-//     } else if (window.matchMedia("(max-width: 400px)").matches) {
-//       sections.style.width =
-//         section[0].offsetWidth * section.length + 100 + "px";
-//     }
-//   }
-// }
+  new ScrollMagic.Scene({
+    triggerElement: ".contact-section .our-concept__title",
+    triggerHook: "onEnter",
+    duration: "100%",
+  })
+    .setTween(tween3)
+    .addTo(controller);
+}

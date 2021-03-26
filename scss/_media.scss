@@ -2718,6 +2718,10 @@ margin-top: 220px;
   .pre-scroll-smoll {
     display: none !important;
   }
+
+  .our-concept.contact-section {
+margin-top: -100px;
+  }
   .pre-scroll-bif-wrapper {
 margin-top: auto !important;
 padding-top: 25px !important;
@@ -2797,3 +2801,11 @@ padding-top: 25px !important;
 /////////////////////
 /// height media////
 ///////////////////
+
+
+@media (min-height: 1500px) {
+  .our-concept.contact-section {
+margin-top: -300px;
+  }
+
+}
