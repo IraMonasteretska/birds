@@ -450,7 +450,7 @@
 }
 
 .pre-scroll.pre-scroll-services {
-  margin-top: 240px;
+
   align-items: flex-start;
 }
 
@@ -471,4 +471,8 @@
   bottom: 0 !important;
   left: 0;
   right: 0;
+}
+
+.pre-scroll-anim.anim-services{
+  margin-top: 0px;
 }

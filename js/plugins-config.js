@@ -258,14 +258,74 @@ if (window.matchMedia("(min-height: 1280px)").matches) {
     .addTo(controller);
 }
 
+if (document.querySelector(".horizontal-block-about")) {
+  var aboutFadeHorizontal = new TimelineMax().to(
+    ".horizontal-block-about",
+    1.5,
+    {
+      opacity: 0,
+    }
+  );
+  new ScrollMagic.Scene({
+    triggerElement: ".horizontal-block-about",
+    triggerHook: "onLeave",
+    duration: "300px",
+  })
+    .setTween(aboutFadeHorizontal)
+    .addTo(controller);
+
+  var fadeOurClients = new TimelineMax().to(".client ", 1.5, {
+    opacity: 1,
+  });
+
+  new ScrollMagic.Scene({
+    triggerElement: ".client",
+    triggerHook: "onEnter",
+    duration: "100%",
+  })
+    .setTween(fadeOurClients)
+    .addTo(controller);
+}
+if (document.querySelector(".two-sections-scroll-services")) {
+  var aboutFadeHorizontal = new TimelineMax().to(".pre-scroll-fp-services", 1, {
+    opacity: 0,
+  });
+  new ScrollMagic.Scene({
+    triggerElement: ".sup-scroll__text",
+    triggerHook: "onLeave",
+    duration: "100%",
+  })
+    .setTween(aboutFadeHorizontal)
+    .addTo(controller);
+
+  var fadeOurClients = new TimelineMax().to(".pre-scroll-anim", 1.5, {
+    opacity: 1,
+  });
+
+  new ScrollMagic.Scene({
+    triggerElement: ".pre-scroll-anim",
+    triggerHook: "onEnter",
+    duration: "100%",
+  })
+    .setTween(fadeOurClients)
+    .addTo(controller);
+}
 // end fade anim for two scroll
 
 // start scroll animation - two
 if (window.matchMedia("(min-height: 1280px)").matches) {
-  let marg = document.querySelector(".our-concept");
-  let margBottom = parseInt(
-    window.getComputedStyle(marg, null).getPropertyValue("margin-bottom")
+  let marg;
+  let margBottom
+  if (document.querySelector(".our-concept")) {
+    marg = document.querySelector(".our-concept");
+  } else if (document.querySelector(".horizontal-block-about")) {
+    marg = document.querySelector(".horizontal-block-about");
+  }
+  if (!document.querySelector(".two-sections-scroll-services")) {
+  margBottom = parseInt(
+  window.getComputedStyle(marg, null).getPropertyValue("margin-bottom")
   );
+  }
   // start two pre scroll
   if (document.querySelector(".two-pre-scroll.pre-scroll-smoll")) {
     var pre = new TimelineMax().to(".two-sections-scroll", 1, {
@@ -281,13 +341,27 @@ if (window.matchMedia("(min-height: 1280px)").matches) {
       .setTween(pre)
       .addTo(controller);
   }
+  if (document.querySelector(".pre-scroll-smoll-about")) {
+    var pre = new TimelineMax().to(".two-sections-scroll", 1, {
+      x: "-10%",
+      ease: Linear.easeNone,
+    });
+    new ScrollMagic.Scene({
+      triggerElement: ".horizontal-block-about",
+      triggerHook: "onLeave",
+      duration: margBottom + marg.clientHeight + "px",
+    })
+      .setTween(pre)
+      .addTo(controller);
+  }
   // end two pre scroll
-
   // start scroll animation - two
   if (document.querySelector(".two-sections-scroll")) {
-    if (window.matchMedia("(min-width: 700px)").matches) {
+    if (
+      window.matchMedia("(min-width: 700px)").matches &&
+      document.querySelector(".our-concept ")
+    ) {
       var horizontalSlide = new TimelineMax()
-
         .to(".two-sections-scroll", 1, {
           x: "-20%",
           ease: Linear.easeNone,
@@ -319,6 +393,90 @@ if (window.matchMedia("(min-height: 1280px)").matches) {
           ease: Linear.easeNone,
         })
 
+        .to(".two-wrapper-scroll", 1, {
+          opacity: "0",
+        });
+    } else if (
+      window.matchMedia("(min-width: 700px)").matches &&
+      document.querySelector(".horizontal-block-about")
+    ) {
+      var horizontalSlide = new TimelineMax()
+        .to(".two-sections-scroll", 1, {
+          x: "-20%",
+          ease: Linear.easeNone,
+        })
+        .to(".two-sections-scroll", 1, {
+          x: "-30%",
+          ease: Linear.easeNone,
+        })
+        .to(".two-sections-scroll", 1, {
+          x: "-40%",
+          ease: Linear.easeNone,
+        })
+        .to(".two-sections-scroll", 1, {
+          x: "-50%",
+          ease: Linear.easeNone,
+        })
+        .to(".two-sections-scroll", 1, {
+          x: "-60%",
+          ease: Linear.easeNone,
+        })
+        .to(".two-sections-scroll", 1, {
+          x: "-70%",
+          ease: Linear.easeNone,
+        })
+        .to(".two-wrapper-scroll", 1, {
+          x: "-10%",
+          y: "-25",
+          opacity: ".5",
+          ease: Linear.easeNone,
+        })
+        .to(".two-wrapper-scroll", 1, {
+          opacity: "0",
+        });
+    } else if (
+      window.matchMedia("(min-width: 700px)").matches &&
+      document.querySelector(".two-sections-scroll-services")
+    ) {
+      var horizontalSlide = new TimelineMax()
+        .to(".two-sections-scroll", 1, {
+          x: "-10%",
+          ease: Linear.easeNone,
+        })
+        .to(".two-sections-scroll", 1, {
+          x: "-20%",
+          ease: Linear.easeNone,
+        })
+        .to(".two-sections-scroll", 1, {
+          x: "-30%",
+          ease: Linear.easeNone,
+        })
+        .to(".two-sections-scroll", 1, {
+          x: "-40%",
+          ease: Linear.easeNone,
+        })
+        .to(".two-sections-scroll", 1, {
+          x: "-50%",
+          ease: Linear.easeNone,
+        })
+        .to(".two-sections-scroll", 1, {
+          x: "-60%",
+          ease: Linear.easeNone,
+        })
+        .to(".two-sections-scroll", 1, {
+          x: "-70%",
+          ease: Linear.easeNone,
+        })
+        .to(".two-sections-scroll", 1, {
+          x: "-80%",
+          ease: Linear.easeNone,
+        })
+        .to(".two-sections-scroll", 1, {
+          x: "-90%",
+          y: "-35%",
+          opacity: ".5",
+          ease: Linear.easeNone,
+        })
         .to(".two-wrapper-scroll", 1, {
           opacity: "0",
         });
@@ -508,7 +666,6 @@ if (window.matchMedia("(max-height: 1280px)").matches) {
 // end fade anim for first scroll
 
 // start scroll animation - first
-
 if (window.matchMedia("(min-height: 1280px)").matches) {
   if (document.querySelector(".first-sections-scroll")) {
     // start first pre scroll

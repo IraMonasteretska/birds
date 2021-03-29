@@ -131,7 +131,7 @@
 .client {
     background: url(../img/main-page/bg-green.png);
     padding: 80px;
-    margin-top: 100px;
+    margin-top: -50px;
     margin-bottom: 100px;
     margin-left: 60px;
     margin-right: 60px;
@@ -360,3 +360,10 @@
     background: url(../img/main-page/bg-green.png);
     margin-bottom: -300px;
 }
+
+
+
+
+.client{
+  opacity: 0.3;
+  }
