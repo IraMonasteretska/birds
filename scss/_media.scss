@@ -2803,9 +2803,25 @@ padding-top: 25px !important;
 ///////////////////
 
 
-@media (min-height: 1500px) {
+@media (min-height: 1400px) {
+  .our-concept-fp{
+    margin-top: -100px;
+  }
   .our-concept.contact-section {
-margin-top: -300px;
+margin-top: -800px;
   }
 
+}
+// @media (min-height: 1500px) {
+//   .our-concept.contact-section {
+// margin-top: -850px;
+//   }
+
+// }
+
+
+@media (min-height: 1280px){
+.three-block {
+    margin-bottom: 120px;
+}
 }
