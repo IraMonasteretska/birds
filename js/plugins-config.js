@@ -343,7 +343,7 @@ if (window.matchMedia("(min-height: 1280px)").matches) {
   }
   if (document.querySelector(".pre-scroll-smoll-about")) {
     var pre = new TimelineMax().to(".two-sections-scroll", 1, {
-      x: "-6%",
+      x: "-10%",
       ease: Linear.easeNone,
     });
     new ScrollMagic.Scene({
@@ -490,7 +490,7 @@ if (window.matchMedia("(min-height: 1280px)").matches) {
       new ScrollMagic.Scene({
         triggerElement: ".two-wrapper-scroll",
         triggerHook: "onLeave",
-        duration: "150%",
+        duration: "100%",
       })
         .setPin(".two-wrapper-scroll")
         .setTween(horizontalSlide)
