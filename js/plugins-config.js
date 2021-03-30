@@ -343,7 +343,7 @@ if (window.matchMedia("(min-height: 1280px)").matches) {
   }
   if (document.querySelector(".pre-scroll-smoll-about")) {
     var pre = new TimelineMax().to(".two-sections-scroll", 1, {
-      x: "-10%",
+      x: "-6%",
       ease: Linear.easeNone,
     });
     new ScrollMagic.Scene({
