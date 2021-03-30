@@ -315,16 +315,16 @@ if (document.querySelector(".two-sections-scroll-services")) {
 // start scroll animation - two
 if (window.matchMedia("(min-height: 1280px)").matches) {
   let marg;
-  let margBottom
+  let margBottom;
   if (document.querySelector(".our-concept")) {
     marg = document.querySelector(".our-concept");
   } else if (document.querySelector(".horizontal-block-about")) {
     marg = document.querySelector(".horizontal-block-about");
   }
   if (!document.querySelector(".two-sections-scroll-services")) {
-  margBottom = parseInt(
-  window.getComputedStyle(marg, null).getPropertyValue("margin-bottom")
-  );
+    margBottom = parseInt(
+      window.getComputedStyle(marg, null).getPropertyValue("margin-bottom")
+    );
   }
   // start two pre scroll
   if (document.querySelector(".two-pre-scroll.pre-scroll-smoll")) {
@@ -417,14 +417,7 @@ if (window.matchMedia("(min-height: 1280px)").matches) {
           x: "-50%",
           ease: Linear.easeNone,
         })
-        .to(".two-sections-scroll", 1, {
-          x: "-60%",
-          ease: Linear.easeNone,
-        })
-        .to(".two-sections-scroll", 1, {
-          x: "-70%",
-          ease: Linear.easeNone,
-        })
+     
         .to(".two-wrapper-scroll", 1, {
           x: "-10%",
           y: "-25",
@@ -490,14 +483,28 @@ if (window.matchMedia("(min-height: 1280px)").matches) {
       });
     }
 
-    new ScrollMagic.Scene({
-      triggerElement: ".two-wrapper-scroll",
-      triggerHook: "onLeave",
-      duration: "300%",
-    })
-      .setPin(".two-wrapper-scroll")
-      .setTween(horizontalSlide)
-      .addTo(controller);
+    if (
+      window.matchMedia("(min-width: 700px)").matches &&
+      document.querySelector(".horizontal-block-about")
+    ) {
+      new ScrollMagic.Scene({
+        triggerElement: ".two-wrapper-scroll",
+        triggerHook: "onLeave",
+        duration: "150%",
+      })
+        .setPin(".two-wrapper-scroll")
+        .setTween(horizontalSlide)
+        .addTo(controller);
+    } else {
+      new ScrollMagic.Scene({
+        triggerElement: ".two-wrapper-scroll",
+        triggerHook: "onLeave",
+        duration: "300%",
+      })
+        .setPin(".two-wrapper-scroll")
+        .setTween(horizontalSlide)
+        .addTo(controller);
+    }
 
     let sections = document.querySelector(".two-sections-scroll");
     let section = document.querySelectorAll(".section-scroll-two");
