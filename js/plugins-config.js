@@ -417,7 +417,7 @@ if (window.matchMedia("(min-height: 1280px)").matches) {
           x: "-50%",
           ease: Linear.easeNone,
         })
-     
+
         .to(".two-wrapper-scroll", 1, {
           x: "-10%",
           y: "-25",
@@ -694,6 +694,28 @@ if (window.matchMedia("(min-height: 1280px)").matches) {
       })
         .setTween(pre)
         .addTo(controller);
+    } else if (document.querySelector(".web-dev-max")) {
+      let hupFirst = document.querySelector(".video-block");
+      let margBottomFirst = parseInt(
+        window
+          .getComputedStyle(hupFirst, null)
+          .getPropertyValue("margin-bottom")
+      );
+      console.log(margBottomFirst);
+      var pre = new TimelineMax().to(".first-sections-scroll", 1, {
+        x: "-5%",
+        ease: Linear.easeNone,
+      });
+      new ScrollMagic.Scene({
+        triggerElement: ".video-block",
+        triggerHook: "onLeave",
+        duration: hupFirst.clientHeight + margBottomFirst - 500 + "px",
+        offset: 500 + 'px'
+      })
+        .setTween(pre)
+        .addTo(controller);
+      console.log(hupFirst.clientHeight + margBottomFirst);
+
     }
     // end two pre scroll
 

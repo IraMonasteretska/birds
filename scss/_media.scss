@@ -2803,9 +2803,35 @@
   .our-concept.contact-section {
     margin-top: -800px;
   }
+
+  .our-concept.contact-section.web-dev {
+    margin-top: 0px;
+}
 }
 
 @media (min-height: 1280px) {
+
+.video-block.web-dev{
+  margin-bottom: 150px;
+}
+
+  .web-dev-max{
+    margin-top: 0; 
+    .pre-scroll__bg{
+      bottom: -400px;
+    }
+  }
+
+  .first-wrapper-scroll.web-dev{
+    padding-top: 100px;
+  }
+
+  .web-dev-min{
+    display: none;
+  }
+  .web-dev-max.pre-scroll{
+    display: flex;
+  }
 
   .section-scroll-two__service.section-scroll-two__container{
     width: 850px ;
