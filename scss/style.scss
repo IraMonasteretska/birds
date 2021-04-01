@@ -1087,8 +1087,6 @@
   }
 }
 
-@import "media";
-
 .two-sections-scroll {
   position: relative;
 }
@@ -1097,13 +1095,14 @@
   margin-bottom: 0;
 }
 
-// .contact-section, .our-concept-fp{
-//   opacity: 0;
-// }
-
 .pre-scroll.container.pre-scroll-smoll {
   margin-bottom: 0 !important;
 }
+
+
+//////////////////////////////////////////////
+//////////// web-dev ////////////////////////
+////////////////////////////////////////////
 
 .web-dev {
   &.pre-scroll {
@@ -1132,8 +1131,36 @@
     opacity: 0;
     height: 0;
   }
+
+  .contact-page-two__left{
+    font-weight: normal;
+  }
+
+  .contact-page-two__left{
+    width: calc(65% - 50px);
+  }
+  .contact-page-two__right{
+    width: calc(35% - 120px);
+  }
+
 }
 
- .web-dev-max{
+
+.web-dev-max {
   display: none;
 }
+
+.video-block__title--web-dev{
+  font-size: 40px;
+}
+
+.web-dev__main-title{
+  font-size: 40px;
+}
+
+.pre-scroll__title--web-dev{
+  font-size: 40px;
+}
+
+
+@import "media";
