@@ -18,6 +18,35 @@ for (let i of headerMenuItem) {
 }
 // end burger menu
 
+// start language menu
+if (document.querySelector(".header__lang-menu")) {
+  let langBlock = document.querySelector(".header__lang-menu");
+  let iconBlock = document.querySelector(".header__language-arrow");
+  document
+    .querySelector(".header__current-language")
+    .addEventListener("click", () => {
+      langBlock.classList.toggle("active");
+      iconBlock.classList.toggle("active");
+    });
+
+  let langSvg_ = document.querySelector(".header__language-arrow svg");
+  let langSvg__ = document.querySelector(".header__language-arrow path");
+  document.addEventListener("click", (e) => {
+    let target = e.target;
+    if (
+      !target.classList.contains("header__language-block") &&
+      !target.classList.contains("header__current-language") &&
+      !target.classList.contains("header__language-arrow") &&
+      target != langSvg_ &&
+      target != langSvg__
+    ) {
+      langBlock.classList.remove("active");
+      iconBlock.classList.remove("active");
+    }
+  });
+}
+// end language menu
+
 // start view more text in main page
 // if (document.querySelector('.three-block__text')) {
 //   let viewMoreBtn = document.querySelector('.three-block__view-more')
@@ -167,7 +196,6 @@ if (document.querySelector('.about-scroll__skill-block')) {
 
 }
 // end view more items in about page
-
 
 
 
