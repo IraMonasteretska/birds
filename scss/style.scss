@@ -1190,10 +1190,12 @@
 
 /* lenguages */
 .header_flag{
+  filter: grayscale(100%); 
   transition: all .5s;
-  opacity: 0.3;
+  opacity: 0.5;
   &:hover{
     opacity: 1;
+    filter: grayscale(0); 
   }
 }
 .header__language-arrow {
@@ -1237,7 +1239,8 @@
   height: 33px;
   font-size: 18px;
   margin-top: 9px;
-  opacity: 0.3;
+  opacity: 0.5;
+  filter: grayscale(100%); 
   cursor: pointer;
   width: 100%;
 svg{
@@ -1247,6 +1250,7 @@ svg{
   transition: all 0.4s;
   &:hover {
     opacity: 1;
+    filter: grayscale(0); 
     color: rgba(93, 93, 93, 0.6);
   }
 }
