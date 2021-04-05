@@ -1105,12 +1105,20 @@
 ////////////////////////////////////////////
 
 .web-dev {
+
+  &.single__breadcrumbs{
+margin-top: 240px;
+    .single__bread-this{
+      width: auto;
+
+    }
+  }
   &.pre-scroll {
     margin-bottom: -100px;
   }
 
   &.contact-page__start{
-    margin-top: 190px;
+    margin-top: 80px;
   }
 
   &.contact-page-two{
