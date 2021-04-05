@@ -20,6 +20,10 @@ for (let i of headerMenuItem) {
 
 // start language menu
 if (document.querySelector(".header__lang-menu")) {
+
+  // add for look
+  
+
   let langBlock = document.querySelector(".header__lang-menu");
   let iconBlock = document.querySelector(".header__language-arrow");
   document
@@ -29,21 +33,28 @@ if (document.querySelector(".header__lang-menu")) {
       iconBlock.classList.toggle("active");
     });
 
-  let langSvg_ = document.querySelector(".header__language-arrow svg");
-  let langSvg__ = document.querySelector(".header__language-arrow path");
-  document.addEventListener("click", (e) => {
-    let target = e.target;
-    if (
-      !target.classList.contains("header__language-block") &&
-      !target.classList.contains("header__current-language") &&
-      !target.classList.contains("header__language-arrow") &&
-      target != langSvg_ &&
-      target != langSvg__
-    ) {
-      langBlock.classList.remove("active");
-      iconBlock.classList.remove("active");
-    }
-  });
+  // let langSvg_ = document.querySelector(".header__language-arrow svg");
+  // let langSvg__ = document.querySelector(".header__language-arrow path");
+  // let langSvgFlag = document.querySelector(".header_flag");
+  // let langSvgFlag__ = document.querySelector(".header_flag svg");
+  // let langSvgFlag_ = document.querySelector(".header_flag path");
+  // document.addEventListener("click", (e) => {
+  //   let target = e.target;
+  //   console.log(target);
+  //   if (
+  //     !target.classList.contains("header__language-block") &&
+  //     !target.classList.contains("header__current-language") &&
+  //     !target.classList.contains("header__language-arrow") &&
+  //     target != langSvg_ &&
+  //     target != langSvgFlag__ &&
+  //     target != langSvgFlag_ &&
+  //     target != langSvgFlag &&
+  //     target != langSvg__
+  //   ) {
+  //     langBlock.classList.remove("active");
+  //     iconBlock.classList.remove("active");
+  //   }
+  // });
 }
 // end language menu
 

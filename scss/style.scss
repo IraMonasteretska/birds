@@ -1189,7 +1189,13 @@
 }
 
 /* lenguages */
-
+.header_flag{
+  transition: all .5s;
+  opacity: 0.5;
+  &:hover{
+    opacity: 1;
+  }
+}
 .header__language-arrow {
   position: absolute;
   left: -26px;
@@ -1227,10 +1233,20 @@
 }
 
 .header__lang-menu li {
+  max-width: 33px;
+  height: 33px;
   font-size: 18px;
   margin-top: 9px;
+  opacity: 0.5;
+  cursor: pointer;
+  width: 100%;
+svg{
+  width: 100%;
+  height: 33px;
+}
   transition: all 0.4s;
   &:hover {
+    opacity: 1;
     color: rgba(93, 93, 93, 0.6);
   }
 }
