@@ -894,7 +894,6 @@
     border: none;
     border-bottom: 1px solid #313231;
     font-style: normal;
-    font-weight: bold;
     font-size: 18px;
     line-height: 140%;
     letter-spacing: 0.09em;
@@ -980,9 +979,7 @@
     cursor: pointer;
     font-size: 18px;
     transition: all 0.3s;
-    font-family: "PT Serif";
     font-style: normal;
-    font-weight: bold;
     line-height: 140%;
     letter-spacing: 0.09em;
     color: #313231;
@@ -1102,13 +1099,14 @@
 //////////// web-dev ////////////////////////
 ////////////////////////////////////////////
 
+
+.our-concept.contact-section .our-concept__quadro {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%;
+}
+
 .web-dev {
-
-  .our-concept__quadro {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
   .our-concept__df{
     display: block;
   }
@@ -1143,7 +1141,8 @@ padding-top: 30px;
   }
 
   .pre-scroll__bg{
-    background: none;
+    background: #FBFBFD;
+    // background: #000;
   }
 
   .pre-scroll__text{
