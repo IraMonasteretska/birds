@@ -1099,7 +1099,6 @@
 //////////// web-dev ////////////////////////
 ////////////////////////////////////////////
 
-
 .our-concept.contact-section .our-concept__quadro {
   left: 50%;
   transform: translateX(-50%);
@@ -1107,27 +1106,26 @@
 }
 
 .web-dev {
-  .our-concept__df{
+  .our-concept__df {
     display: block;
   }
-.our-concept__rigth{
-  width: 100%;
-  background: none;
-padding-left: 0;
-padding-right: 0;
-padding-top: 30px;
-}
+  .our-concept__rigth {
+    width: 100%;
+    background: none;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 30px;
+  }
 
-.our-concept__text-block{
-  display: block;
-}
-.our-concept__text{
-  width: 100%;
-  color: #313231;
-}
+  .our-concept__text-block {
+    display: block;
+  }
+  .our-concept__text {
+    width: 100%;
+    color: #313231;
+  }
 
-
-  .two-block__about-more{
+  .two-block__about-more {
     margin-bottom: -40px;
   }
   &.single__breadcrumbs {
@@ -1140,13 +1138,13 @@ padding-top: 30px;
     margin-bottom: -100px;
   }
 
-  .pre-scroll__bg{
-    background: #FBFBFD;
+  .pre-scroll__bg {
+    background: #fbfbfd;
     // background: #000;
   }
 
-  .pre-scroll__text{
-color: #313231;
+  .pre-scroll__text {
+    color: #313231;
   }
 
   &.contact-page__start {
@@ -1160,6 +1158,7 @@ color: #313231;
 
   .pre-scroll__title {
     width: 100%;
+    color: #313231;
   }
 
   .about-scroll__skill-title {
@@ -1179,8 +1178,8 @@ color: #313231;
   }
 
   .video-block__right {
-background: none;
-padding: 0;
+    background: none;
+    padding: 0;
   }
   .video-block__bot-text.hidden {
     opacity: 0;
@@ -1229,13 +1228,13 @@ padding: 0;
 }
 
 /* lenguages */
-.header_flag{
-  filter: grayscale(100%); 
-  transition: all .5s;
+.header_flag {
+  filter: grayscale(100%);
+  transition: all 0.5s;
   opacity: 0.5;
-  &:hover{
+  &:hover {
     opacity: 1;
-    filter: grayscale(0); 
+    filter: grayscale(0);
   }
 }
 .header__language-arrow {
@@ -1280,17 +1279,17 @@ padding: 0;
   font-size: 18px;
   margin-top: 9px;
   opacity: 0.5;
-  filter: grayscale(100%); 
+  filter: grayscale(100%);
   cursor: pointer;
   width: 100%;
-svg{
-  width: 100%;
-  height: 33px;
-}
+  svg {
+    width: 100%;
+    height: 33px;
+  }
   transition: all 0.4s;
   &:hover {
     opacity: 1;
-    filter: grayscale(0); 
+    filter: grayscale(0);
     color: rgba(93, 93, 93, 0.6);
   }
 }
@@ -1353,7 +1352,7 @@ svg{
   .header__menu {
     margin-right: 100px !important;
   }
-  .web-dev-min.web-dev.pre-scroll{
+  .web-dev-min.web-dev.pre-scroll {
     margin-bottom: 0px;
   }
 }
