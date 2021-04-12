@@ -1,7 +1,5 @@
 // height media
 
-
-
 * {
   font-family: Arial;
   font-style: normal;
@@ -66,7 +64,7 @@ body {
   overflow-y: visible;
 }
 html {
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
 
 .tooltip {
@@ -97,7 +95,6 @@ html {
   align-items: flex-end;
 }
 
-
 img.image__animation {
   z-index: 1;
   height: 100%;
@@ -110,11 +107,8 @@ img.horizontal-block__right {
   width: 100%;
   object-fit: cover;
   height: 100%;
-  
 }
 
-.our-concept__quadro-gradient{
+.our-concept__quadro-gradient {
   height: 100%;
 }
-
-

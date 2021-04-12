@@ -893,7 +893,6 @@
     width: 43%;
     border: none;
     border-bottom: 1px solid #313231;
-    font-family: "PT Serif";
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
@@ -1104,6 +1103,32 @@
 ////////////////////////////////////////////
 
 .web-dev {
+
+  .our-concept__quadro {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .our-concept__df{
+    display: block;
+  }
+.our-concept__rigth{
+  width: 100%;
+  background: none;
+padding-left: 0;
+padding-right: 0;
+padding-top: 30px;
+}
+
+.our-concept__text-block{
+  display: block;
+}
+.our-concept__text{
+  width: 100%;
+  color: #313231;
+}
+
+
   .two-block__about-more{
     margin-bottom: -40px;
   }
@@ -1115,6 +1140,14 @@
   }
   &.pre-scroll {
     margin-bottom: -100px;
+  }
+
+  .pre-scroll__bg{
+    background: none;
+  }
+
+  .pre-scroll__text{
+color: #313231;
   }
 
   &.contact-page__start {
@@ -1143,6 +1176,12 @@
   }
   .video-block__bot-text {
     transition: all 0.3s;
+    color: #313231;
+  }
+
+  .video-block__right {
+background: none;
+padding: 0;
   }
   .video-block__bot-text.hidden {
     opacity: 0;
@@ -1175,6 +1214,7 @@
 }
 
 .video-block__title--web-dev {
+  color: #313231;
   font-size: 40px;
 }
 
@@ -1186,6 +1226,7 @@
 
 .pre-scroll__title--web-dev {
   font-size: 40px;
+  color: #313231;
 }
 
 /* lenguages */
