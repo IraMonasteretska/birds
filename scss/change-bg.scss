@@ -1,0 +1,150 @@
+.change-bg-video-block {
+  .video-block__right {
+    background: #fbfbfd;
+  }
+
+  .video-block__title,
+  .video-block__bot-text {
+    color: #313231;
+  }
+}
+
+.change-bg-pre-scroll {
+  .pre-scroll__bg {
+    background: #fbfbfd;
+  }
+
+  .pre-scroll__title,
+  .pre-scroll__text {
+    color: #313231;
+  }
+}
+
+.change-bg-pre-scroll-two {
+  .pre-scroll__bg {
+    background: none;
+  }
+
+  .pre-scroll__right {
+    width: 100%;
+  }
+
+  .pre-scroll__title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 90px;
+  }
+
+  .pre-scroll__btn {
+    width: 35%;
+  }
+
+  .standart-button-link {
+    max-width: 470%;
+  }
+
+  .pre-scroll__text {
+    width: calc(65% - 80px);
+    margin: 0;
+  }
+}
+
+.change-bg-quadro {
+  .our-concept__rigth {
+    background: none;
+    width: 100%;
+  }
+  .our-concept__left {
+    width: 0;
+  }
+  .our-concept__rigth-title,
+  .our-concept__text {
+    color: #313231;
+  }
+
+  .our-concept__df {
+    margin-top: 0;
+  }
+
+  .our-concept__text-block {
+    display: block;
+    margin-top: 40px;
+  }
+
+  .our-concept__text {
+    width: 100%;
+  }
+}
+
+.change-bg-concept {
+  .our-concept__quadro,
+  .our-concept__empty {
+    display: none;
+  }
+
+  .our-concept__rigth {
+    width: 100%;
+    background: url(../img/forest-bg.png);
+    height: 800px;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 60px;
+    background-position: 0 -350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .our-concept__rigth-title {
+    width: 100%;
+    max-width: none;
+  }
+  .our-concept__rigth-title,
+  .our-concept__text {
+    color: #313231;
+  }
+
+  .our-concept__left {
+    width: 0;
+    display: none;
+  }
+
+  .our-concept__btns {
+    width: 100%;
+  }
+
+  .our-concept__text-block {
+    display: block;
+    width: calc(65% - 40px);
+    padding-left: 60px;
+    box-sizing: border-box;
+  }
+
+  .our-concept__text {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+  }
+
+  .our-concept__buttons-abs {
+    width: 35%;
+  }
+}
+
+.change-bg-concept.our-concept {
+  width: 100%;
+  padding: 0;
+  margin-left: -30px;
+  margin-right: 0px;
+  margin-bottom: 0;
+}
+
+
+.change-bg-quadro--gray{
+  background: url(../img/main-page/bg-green.png);
+  width: 200vw;
+  height: 250px;
+  margin-bottom: 150px;
+  margin-left: -60px;
+  margin-right: -60px;
+}
