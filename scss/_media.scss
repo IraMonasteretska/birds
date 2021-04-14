@@ -2880,6 +2880,11 @@
 }
 
 @media (max-height: 1280px) {
+
+.web-dev-max{
+  display: none !important;
+}
+
   .about-croll-wrapper__bg.pre-scroll-bif-wrapper {
     display: none;
   }
