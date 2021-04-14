@@ -1462,11 +1462,15 @@
     }
   }
 
+  .header__language-block{
+    display: none;
+  }
+
   .header {
     flex-direction: row-reverse;
   }
   .header__logo {
-    max-width: 80px;
+    max-width: 200px;
     z-index: 100;
     img {
       width: 100%;
@@ -2635,7 +2639,7 @@
   }
 
   .our-concept.contact-section {
-    margin-bottom: 750px;
+    margin-bottom: 790px;
   }
 
   .slider-blog__slider {

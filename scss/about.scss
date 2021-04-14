@@ -87,7 +87,7 @@
     }
 }
 .two-block__about-text {
-    width: calc(50% - 15px);
+    width: calc(50% - 25px);
     margin-top: 10px;
     transition: opacity 0.5s;
 }
@@ -96,6 +96,7 @@
     z-index: -1;
     height: 0;
     width: 0;
+    position: absolute;
 }
 .two-block__right-about {
     display: flex;
@@ -109,18 +110,21 @@
     display: none;
 }
 .two-block__about-more {
+
     font-weight: bold;
     font-size: 18px;
     line-height: 140%;
     letter-spacing: 0.09em;
     color: #c9af6e;
     display: block;
-    width: max-content;
     margin-left: auto;
     margin-right: 0;
     cursor: pointer;
     margin-top: 7px;
     transition: all 0.3s;
+    width: 100%;
+text-align: right;
+    
     &:hover {
         color: #5d5d5d;
     }

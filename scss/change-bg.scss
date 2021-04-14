@@ -79,11 +79,11 @@
 .change-bg-concept {
   background: url(../img/forest-bg.png);
   height: 1000px;
-
   box-sizing: border-box;
   padding: 60px;
   background-position: 0 -100px;
-
+margin-left: 0 !important;
+margin-right: 0 !important;
   .our-concept__quadro,
   .our-concept__empty {
     display: none;
@@ -96,6 +96,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    box-sizing: border-box;
   }
 
   .our-concept__rigth-title {
@@ -282,4 +283,14 @@ right: 0;
 height: 200px;
 background: url(../img/main-page/bg-green.png); 
  }
+}
+
+.two-block__about-title-change{
+  width: 100%;
+  font-weight: 900;
+font-size: 18px;
+line-height: 140%;
+text-transform: uppercase;
+color: #313231;
+margin-bottom: 20px;
 }
