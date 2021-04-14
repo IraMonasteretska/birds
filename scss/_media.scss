@@ -37,9 +37,7 @@
   }
 
   .video-block {
-    &__title {
-      font-size: 44px;
-    }
+ 
     &__top-text {
       font-size: 17px;
     }
@@ -452,9 +450,16 @@
   .single__head-title,
   .services-first__title,
   .benefits__title,
-  .service-contact__title {
+  .service-contact__title,
+  .two-block__left-title {
     font-size: 38px;
   }
+
+
+
+  .contact-blog__main {
+    max-width: 650px;
+}
 
   .change-bg-quadro--gray {
     height: 210px;
@@ -2269,9 +2274,9 @@
   }
 
   .change-bg-st-line {
-    margin-bottom: 120px;
+    margin-bottom: 150px;
     &::before {
-      bottom: -120px;
+      bottom: -150px;
       height: 120px;
     }
   }

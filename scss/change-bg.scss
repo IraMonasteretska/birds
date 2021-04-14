@@ -253,10 +253,11 @@ margin-right: 0 !important;
 .contact-page {
   &__start-change {
     display: flex;
+    justify-content: space-between;
   }
 
   &__start-change-wrap {
-    width: 57%;
+    width: 40%;
     img {
       width: 100%;
     }
@@ -273,11 +274,11 @@ margin-right: 0 !important;
 
 .change-bg-st-line {
   position: relative;
-  margin-bottom: 120px;
+  margin-bottom: 170px;
   &::before{
 position: absolute;
 content: '';
-bottom: -200px;
+bottom: -250px;
 left: 0;
 right: 0;
 height: 200px;
@@ -294,3 +295,29 @@ text-transform: uppercase;
 color: #313231;
 margin-bottom: 20px;
 }
+
+.contact-header{
+  .burger__container{
+    .burger__top,
+    .burger__bot,
+    .burger__center{
+      background: #fff;
+     
+    }
+  }
+  .burger__container.active{
+    .burger__top,
+    .burger__bot,
+    .burger__center{
+      background: #313231;
+     
+    }
+  }
+ 
+}
+
+
+.slider-blog_left{
+  margin-top: 40px;
+}
+
