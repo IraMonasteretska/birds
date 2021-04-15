@@ -797,7 +797,7 @@ if (window.matchMedia("(max-height: 1280px)").matches) {
     if (document.querySelector(".pre-scroll.pre-scroll-smoll")) {
       let hupFirst = document.querySelector(".pre-scroll.pre-scroll-smoll");
       var pre = new TimelineMax().to(".first-sections-scroll", 1, {
-        x: "-5%",
+        x: "-10%",
         ease: Linear.easeNone,
       });
       console.log(document.querySelector(".pre-scroll.pre-scroll-smoll"));
@@ -814,19 +814,19 @@ if (window.matchMedia("(max-height: 1280px)").matches) {
     if (window.matchMedia("(min-width: 1780px)").matches) {
       var horizontalSlide = new TimelineMax()
         .to(".first-sections-scroll", 1, {
-          x: "-10%",
-          ease: Linear.easeNone,
-        })
-        .to(".first-sections-scroll", 1, {
-          x: "-15%",
-          ease: Linear.easeNone,
-        })
-        .to(".first-sections-scroll", 1, {
           x: "-20%",
           ease: Linear.easeNone,
         })
         .to(".first-sections-scroll", 1, {
-          x: "-25%",
+          x: "-30%",
+          ease: Linear.easeNone,
+        })
+        .to(".first-sections-scroll", 1, {
+          x: "-40%",
+          ease: Linear.easeNone,
+        })
+        .to(".first-sections-scroll", 1, {
+          x: "-50%",
           y: "-17%",
           ease: Linear.easeNone,
         });
