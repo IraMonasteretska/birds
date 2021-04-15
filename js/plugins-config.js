@@ -335,11 +335,13 @@ if (window.matchMedia("(min-height: 1280px)").matches) {
     new ScrollMagic.Scene({
       triggerElement: ".our-concept",
       triggerHook: "onLeave",
-      duration: margBottom + "px",
-      offset: marg.clientHeight + "px",
+      // duration: margBottom + "px",
+      duration: marg.clientHeight + "px",
+      // offset: marg.clientHeight + "px",
     })
       .setTween(pre)
       .addTo(controller);
+
   }
   if (document.querySelector(".pre-scroll-smoll-about")) {
     var pre = new TimelineMax().to(".two-sections-scroll", 1, {
